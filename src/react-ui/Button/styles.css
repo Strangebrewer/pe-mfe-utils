@@ -1,0 +1,119 @@
+.button-base {
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  outline: transparent;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  min-width: 80px;
+  padding: 6px 12px;
+  margin-right: 16px;
+
+  &:disabled {
+    background-color: #32505066;
+    border: 1px solid #32505099;
+    box-shadow: none;
+    cursor: default;
+    color: #325050dd;
+  }
+}
+
+.button-small {
+  min-width: 60px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.button-last {
+  margin-right: 0;
+}
+
+.button-blue {
+  background-color: #fff;
+  border: 1px solid var(--dodgerblue);
+  box-shadow: 4px 4px 4px var(--dodgerblue);
+  color: var(--dodgerblue);
+
+  &:hover:enabled {
+    background-color: var(--dodgerblue);
+    color: #fff;
+    box-shadow: 4px 4px 4px var(--dodgerblueAlpha);
+  }
+}
+
+.button-green {
+  background-color: #fff;
+  border: 1px solid var(--green);
+  box-shadow: 4px 4px 4px var(--green);
+  color: var(--green);
+
+  &:hover:enabled {
+    background-color: var(--green);
+    color: #fff;
+    box-shadow: 4px 4px 4px var(--greenAlpha);
+  }
+}
+
+.button-red {
+  background-color: #fff;
+  border: 1px solid var(--candy);
+  box-shadow: 4px 4px 4px var(--candy);
+  color: var(--candy);
+
+  &:hover:enabled {
+    background-color: var(--candy);
+    color: #fff;
+    box-shadow: 4px 4px 4px var(--candyAlpha);
+  }
+}
+
+.button-yellow {
+  background-color: #fff;
+  border: 1px solid var(--yellow);
+  box-shadow: 4px 4px 4px var(--yellow);
+  color: var(--yellow);
+
+  &:hover:enabled {
+    background-color: var(--yellow);
+    color: #000;
+    box-shadow: 4px 4px 4px var(--yellowAlpha);
+  }
+}
+
+.button-lime {
+  background-color: #fff;
+  border: 1px solid var(--lime);
+  box-shadow: 4px 4px 4px var(--lime);
+  color: var(--lime);
+
+  &:hover:enabled {
+    background-color: var(--lime);
+    color: #fff;
+    box-shadow: 4px 4px 4px var(--limeAlpha);
+  }
+}
+
+.button-purple {
+  background-color: #fff;
+  border: 1px solid var(--purple);
+  box-shadow: 4px 4px 4px var(--purple);
+  color: var(--purple);
+
+  &:hover:enabled {
+    background-color: var(--purple);
+    color: #fff;
+    box-shadow: 4px 4px 4px var(--purpleAlpha);
+  }
+}
+
+.button-grey {
+  background-color: #fff;
+  border: 1px solid var(--slate);
+  box-shadow: 4px 4px 4px var(--slate);
+  color: var(--slate);
+
+  &:hover:enabled {
+    background-color: var(--slate);
+    color: #000;
+    box-shadow: 4px 4px 4px var(--slateAlpha);
+  }
+}

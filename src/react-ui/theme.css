@@ -1,0 +1,53 @@
+:root {
+  /* basic colors */
+  --blue: #0000ff;
+  --red: #ff0000;
+  --yellow: #ffff00;
+  --orange: #ffa500;
+  --purple: #800080;
+  --green: #009400;
+
+  /* button colors */
+  --dodgerblue: #1e90ff;
+  --dodgerblueAlpha: #1e90ff77;
+  --candy: #e22c5a;
+  --candyAlpha: #e22c5a77;
+  --slate: #69747C;
+  --slateAlpha: #69747C77;
+  --greenAlpha: #00940077;
+  --yellowAlpha: #ffff0077;
+  --limeAlpha: #51CB2077;
+  --purpleAlpha: #80008077;
+  --indigo: #4b0082;
+  --indigoAlpha: #4b008277;
+
+  /* neon colors */
+  --nBlue: #4666FF;
+  --nRed: #F2003C;
+  --nYellow: #CCFF00;
+  --nOrange: #FF9933;
+  --nPurple: #BC13FE;
+  --nGreen: #39FF14;
+
+  /* other colors I like */
+  --rose: #F72585;
+  --carrot: #F18F01;
+  --lime: #51CB20;
+  --dukeblue: #03045E;
+  --darkpurple: #37123C;
+  --blood: #890000;
+  --rosewood: #6B0F1A;
+  --cardinal: #C41E3A;
+  --flashwhite: #EDF1F5;
+  --sky: #4CC9F0;
+
+  /* VS Code colors */
+  --functions: #cff1ff;
+  --comments: #818181;
+  --keywords: #9f56c0;
+  --numbers: #bcc794;
+  --strings: #8febc6;
+  --types: #41ffd0;
+  --variables: #78d9ff;
+  --const: #5d8bec;
+}

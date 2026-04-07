@@ -1,0 +1,47 @@
+{
+  "name": "@bka-stuff/pe-mfe-utils",
+  "version": "0.1.0",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepare": "pnpm run build"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "devDependencies": {
+    "@tsdown/css": "^0.21.1",
+    "@types/node": "^25.5.0",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "axios": "1.13.6",
+    "copyfiles": "^2.4.1",
+    "tsdown": "^0.21.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "1.13.6",
+    "jwt-decode": "^4.0.0",
+    "react-router-dom": "^7.13.1",
+    "zustand": "^5.0.12"
+  },
+  "peerDependencies": {
+    "axios": "1.13.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

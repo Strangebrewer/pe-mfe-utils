@@ -1,0 +1,33 @@
+.bka-text-btn {
+  background: transparent;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 6px;
+  margin: 0 12px;
+  color: var(--dodgerblue);
+  &:hover {
+    text-shadow: 0 0 6px var(--dodgerblueAlpha);
+  }
+}
+
+.bka-text-btn-red {
+  color: var(--candy);
+  &:hover {
+    text-shadow: 0 0 6px var(--candyAlpha);
+  }
+}
+
+.bka-text-btn-indigo {
+  color: var(--indigo);
+  &:hover {
+    text-shadow: 0 0 6px var(--indigoAlpha);
+  }
+}
+
+.bka-text-btn-green {
+  color: var(--green);
+  &:hover {
+    text-shadow: 0 0 6px var(--greenAlpha);
+  }
+}
