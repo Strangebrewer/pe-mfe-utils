@@ -1,3 +1,10 @@
+.bka-label {
+  display: block;
+  font-size: .9rem;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
 .bka-form-element {
   background-color: #ddd;
   border: none;
