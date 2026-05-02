@@ -4,7 +4,7 @@ import "./styles.css";
 
 type ButtonProps = {
   text: string;
-  variant: 'blue' | 'green' | 'red' | 'grey' | 'lime' | 'purple';
+  variant: 'blue' | 'green' | 'red' | 'grey' | 'lime' | 'purple' | 'yellow';
   color?: string;
   small?: boolean;
   last?: boolean;
