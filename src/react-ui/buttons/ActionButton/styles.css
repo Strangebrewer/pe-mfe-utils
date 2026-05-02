@@ -1,15 +1,19 @@
 .bka-action-btn {
   background-color: transparent;
   border: none;
-  color: var(--green);
+  color: var(--lime);
   cursor: pointer;
   margin: auto 0;
   outline: transparent;
   padding: 0;
   font-size: 12px;
-  
+
+  &:hover {
+    filter: brightness(1.25);
+  }
+
   &:i {
-    color: var(--green);
+    color: var(--lime);
   }
 
   &:disabled {
@@ -18,16 +22,16 @@
 }
 
 .bka-action-btn--blue {
-  color: var(--dodgerblue);
+  color: var(--nCyan);
   &:i {
-    color: var(--dodgerblue);
+    color: var(--nCyan);
   }
 }
 
 .bka-action-btn--green {
-  color: var(--green);
+  color: var(--lime);
   &:i {
-    color: var(--green);
+    color: var(--lime);
   }
 }
 
