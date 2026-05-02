@@ -5,7 +5,7 @@
   font-size: 14px;
   outline: transparent;
   margin-right: 16px;
-  padding: 4px 12px;
+  padding: 4px 12px 5px;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
   &:disabled {
