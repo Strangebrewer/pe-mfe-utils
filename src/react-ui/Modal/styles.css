@@ -9,7 +9,7 @@
 }
 
 .bka-modal-wrapper {
-  background-color: #155c8f66;
+  background-color: rgba(13,10,20,0.85);
   cursor: default;
   display: flex;
   min-height: 100vh;
@@ -22,13 +22,13 @@
 }
 
 .bka-modal-body {
-  background: #EDF1F5;
-  border: 1px solid #51CB20;
+  background: #1a0f2e;
+  border: 1px solid #BC13FE;
   box-shadow: 2px 2px 6px #000,
     4px 4px 12px #666,
     6px 6px 18px #666,
-    inset -2px -2px 6px #800080,
-    inset 2px 2px 6px #800080;
+    inset -2px -2px 6px #BC13FE,
+    inset 2px 2px 6px #BC13FE;
   border-radius: 12px;
   font-size: 1.2rem;
   margin: auto;
@@ -37,7 +37,7 @@
   padding: 0;
   position: relative;
   z-index: 9999;
-  
+
   & > img {
     border: 1px solid black;
   }
@@ -46,7 +46,7 @@
 .bka-modal-x-btn {
   background-color: transparent;
   border: none;
-  color: #000;
+  color: #c4b5fd;
   cursor: pointer;
   font-weight: bold;
   margin: 0;
@@ -55,4 +55,8 @@
   position: absolute;
   top: 8px;
   right: 16px;
+
+  &:hover {
+    color: #f0e6ff;
+  }
 }
