@@ -27,8 +27,10 @@
   --nYellow: #CCFF00;
   --nOrange: #FF9933;
   --nPurple: #BC13FE;
+  --nPurpleAlpha: #BC13FE77;
   --nGreen: #39FF14;
   --nCyan: #00E5FF;
+  --nCyanAlpha: #00E5FF77;
 
   /* other colors I like */
   --rose: #F72585;

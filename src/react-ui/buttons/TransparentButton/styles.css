@@ -6,13 +6,13 @@
   color: #fff;
   padding: 0 6px;
   margin: 0 12px;
-  text-shadow: 0 0 1px var(--dodgerblue),
-    0 0 2px var(--dodgerblue),
-    0 0 3px var(--dodgerblue),
-    2px 3px 5px var(--dodgerblue);
+  text-shadow: 0 0 1px var(--nCyan),
+    0 0 2px var(--nCyan),
+    0 0 3px var(--nCyan),
+    2px 3px 5px var(--nCyan);
   transition: color 0.12s ease-in-out, text-shadow 0.12s ease-in-out, transform 0.12s ease-in-out;
   &:hover {
-    color: var(--dodgerblue);
+    color: var(--nCyan);
     text-shadow: 4px 4px 4px #666;
     transform: translate(-1px, -1px);
   }
@@ -29,21 +29,21 @@
 }
 
 .bka-transparent-btn-green {
-  text-shadow: 0 0 1px var(--green),
-    0 0 2px var(--green),
-    0 0 3px var(--green),
-    2px 3px 5px var(--green);
+  text-shadow: 0 0 1px var(--lime),
+    0 0 2px var(--lime),
+    0 0 3px var(--lime),
+    2px 3px 5px var(--lime);
   &:hover {
-    color: var(--green);
+    color: var(--lime);
   }
 }
 
 .bka-transparent-btn-indigo {
-  text-shadow: 0 0 1px var(--indigo),
-    0 0 2px var(--indigo),
-    0 0 3px var(--indigo),
-    2px 3px 5px var(--indigo);
+  text-shadow: 0 0 1px var(--nPurple),
+    0 0 2px var(--nPurple),
+    0 0 3px var(--nPurple),
+    2px 3px 5px var(--nPurple);
   &:hover {
-    color: var(--indigo);
+    color: var(--nPurple);
   }
 }

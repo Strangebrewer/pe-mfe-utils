@@ -5,9 +5,9 @@
   cursor: pointer;
   padding: 0 6px;
   margin: 0 12px;
-  color: var(--dodgerblue);
+  color: var(--nCyan);
   &:hover {
-    text-shadow: 0 0 6px var(--dodgerblueAlpha);
+    text-shadow: 0 0 6px var(--nCyanAlpha);
   }
 }
 
@@ -19,15 +19,15 @@
 }
 
 .bka-text-btn-indigo {
-  color: var(--indigo);
+  color: var(--nPurple);
   &:hover {
-    text-shadow: 0 0 6px var(--indigoAlpha);
+    text-shadow: 0 0 6px var(--nPurpleAlpha);
   }
 }
 
 .bka-text-btn-green {
-  color: var(--green);
+  color: var(--lime);
   &:hover {
-    text-shadow: 0 0 6px var(--greenAlpha);
+    text-shadow: 0 0 6px var(--limeAlpha);
   }
 }

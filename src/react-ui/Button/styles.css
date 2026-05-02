@@ -28,33 +28,33 @@
 }
 
 .button-blue {
-  background-color: #fff;
-  border: 1px solid var(--dodgerblue);
-  box-shadow: 4px 4px 4px var(--dodgerblue);
-  color: var(--dodgerblue);
+  background-color: transparent;
+  border: 1px solid var(--nCyan);
+  box-shadow: 4px 4px 4px var(--nCyan);
+  color: var(--nCyan);
 
   &:hover:enabled {
-    background-color: var(--dodgerblue);
+    background-color: var(--nCyan);
     color: #fff;
-    box-shadow: 4px 4px 4px var(--dodgerblueAlpha);
+    box-shadow: 4px 4px 4px var(--nCyanAlpha);
   }
 }
 
 .button-green {
-  background-color: #fff;
-  border: 1px solid var(--green);
-  box-shadow: 4px 4px 4px var(--green);
-  color: var(--green);
+  background-color: transparent;
+  border: 1px solid var(--lime);
+  box-shadow: 4px 4px 4px var(--lime);
+  color: var(--lime);
 
   &:hover:enabled {
-    background-color: var(--green);
-    color: #fff;
-    box-shadow: 4px 4px 4px var(--greenAlpha);
+    background-color: var(--lime);
+    color: #0d0a14;
+    box-shadow: 4px 4px 4px var(--limeAlpha);
   }
 }
 
 .button-red {
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid var(--candy);
   box-shadow: 4px 4px 4px var(--candy);
   color: var(--candy);
@@ -67,7 +67,7 @@
 }
 
 .button-yellow {
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid var(--yellow);
   box-shadow: 4px 4px 4px var(--yellow);
   color: var(--yellow);
@@ -80,33 +80,33 @@
 }
 
 .button-lime {
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid var(--lime);
   box-shadow: 4px 4px 4px var(--lime);
   color: var(--lime);
 
   &:hover:enabled {
     background-color: var(--lime);
-    color: #fff;
+    color: #0d0a14;
     box-shadow: 4px 4px 4px var(--limeAlpha);
   }
 }
 
 .button-purple {
-  background-color: #fff;
-  border: 1px solid var(--purple);
-  box-shadow: 4px 4px 4px var(--purple);
-  color: var(--purple);
+  background-color: transparent;
+  border: 1px solid var(--nPurple);
+  box-shadow: 4px 4px 4px var(--nPurple);
+  color: var(--nPurple);
 
   &:hover:enabled {
-    background-color: var(--purple);
+    background-color: var(--nPurple);
     color: #fff;
-    box-shadow: 4px 4px 4px var(--purpleAlpha);
+    box-shadow: 4px 4px 4px var(--nPurpleAlpha);
   }
 }
 
 .button-grey {
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid var(--slate);
   box-shadow: 4px 4px 4px var(--slate);
   color: var(--slate);
