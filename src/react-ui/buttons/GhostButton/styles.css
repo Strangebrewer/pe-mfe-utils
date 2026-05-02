@@ -1,0 +1,60 @@
+.bka-ghost-btn {
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 16px;
+  outline: transparent;
+  padding: 4px 12px;
+  transition: color 0.2s ease-in-out;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}
+
+.bka-ghost-btn-last {
+  margin-right: 0;
+}
+
+.bka-ghost-btn-small {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.bka-ghost-btn-violet {
+  border: 1px solid rgba(188, 19, 254, 0.3);
+  color: #c4b5fd;
+
+  &:hover:enabled {
+    color: #f0e6ff;
+  }
+}
+
+.bka-ghost-btn-cyan {
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: #00E5FF;
+
+  &:hover:enabled {
+    color: #fff;
+  }
+}
+
+.bka-ghost-btn-lime {
+  border: 1px solid rgba(81, 203, 32, 0.3);
+  color: #51CB20;
+
+  &:hover:enabled {
+    color: #fff;
+  }
+}
+
+.bka-ghost-btn-red {
+  border: 1px solid rgba(226, 44, 90, 0.3);
+  color: #e22c5a;
+
+  &:hover:enabled {
+    color: #fff;
+  }
+}

@@ -1,6 +1,7 @@
 export { default as Button } from './Button/index';
 export { default as Modal } from './Modal/index';
 export { default as ActionButton } from './buttons/ActionButton/index';
+export { default as GhostButton } from './buttons/GhostButton/index';
 export { default as TextButton } from './buttons/TextButton/index';
 export { default as TransparentButton } from './buttons/TransparentButton/index';
 export { default as Input } from './formElements/input/index';

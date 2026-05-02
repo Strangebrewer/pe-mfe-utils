@@ -5,7 +5,7 @@
   font-size: 14px;
   outline: transparent;
   margin-right: 16px;
-  padding: 8px 16px;
+  padding: 4px 12px;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
   &:disabled {
@@ -18,7 +18,7 @@
 
 .button-small {
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 2px 8px;
 }
 
 .button-last {
