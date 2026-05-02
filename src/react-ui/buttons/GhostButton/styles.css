@@ -42,7 +42,7 @@
 }
 
 .bka-ghost-btn-lime {
-  border: 1px solid rgba(81, 203, 32, 0.3);
+  border: 1px solid #51cb204d;
   color: #51CB20;
 
   &:hover:enabled {
@@ -51,8 +51,17 @@
 }
 
 .bka-ghost-btn-red {
-  border: 1px solid rgba(226, 44, 90, 0.3);
+  border: 1px solid #e22c5a4d;
   color: #e22c5a;
+
+  &:hover:enabled {
+    color: #fff;
+  }
+}
+
+.bka-ghost-btn-grey {
+  border: 1px solid #69747C77;
+  color: #69747C;
 
   &:hover:enabled {
     color: #fff;
