@@ -7,7 +7,7 @@
 
 .bka-form-element {
   background-color: var(--baseBg);
-  border: 1px solid var(--nPurpleAlpha);
+  border: 1px solid var(--textPrimary);
   border-radius: 4px;
   color: var(--textPrimary);
   font-weight: 500;
