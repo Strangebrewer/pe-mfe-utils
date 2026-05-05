@@ -23,47 +23,47 @@
   padding: 2px 8px;
 }
 
-.bka-ghost-btn-violet {
-  border: 1px solid rgba(188, 19, 254, 0.3);
-  color: #c4b5fd;
+.bka-ghost-btn-purple {
+  border: 1px solid var(--nPurpleAlpha);
+  color: var(--textMuted);
 
   &:hover:enabled {
-    color: #f0e6ff;
+    color: var(--textPrimary);
   }
 }
 
-.bka-ghost-btn-cyan {
-  border: 1px solid rgba(0, 229, 255, 0.3);
-  color: #00E5FF;
+.bka-ghost-btn-blue {
+  border: 1px solid var(--nCyanAlpha);
+  color: var(--nCyan);
 
   &:hover:enabled {
-    color: #fff;
+    color: var(--textPrimary);
   }
 }
 
-.bka-ghost-btn-lime {
-  border: 1px solid #51cb204d;
-  color: #51CB20;
+.bka-ghost-btn-green {
+  border: 1px solid var(--limeAlpha);
+  color: var(--lime);
 
   &:hover:enabled {
-    color: #fff;
+    color: var(--textPrimary);
   }
 }
 
 .bka-ghost-btn-red {
-  border: 1px solid #e22c5a4d;
-  color: #e22c5a;
+  border: 1px solid var(--candyAlpha);
+  color: var(--candy);
 
   &:hover:enabled {
-    color: #fff;
+    color: var(--textPrimary);
   }
 }
 
 .bka-ghost-btn-grey {
-  border: 1px solid #69747C77;
-  color: #69747C;
+  border: 1px solid var(----slateAlpha);
+  color: var(--slate);
 
   &:hover:enabled {
-    color: #fff;
+    color: var(--textPrimary);
   }
 }

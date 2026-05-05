@@ -6,15 +6,16 @@
   color: #fff;
   padding: 0 6px;
   margin: 0 12px;
+  transition: color 0.12s ease-in-out, text-shadow 0.12s ease-in-out, transform 0.12s ease-in-out;
+}
+
+.bka-transparent-btn-blue {
   text-shadow: 0 0 1px var(--nCyan),
     0 0 2px var(--nCyan),
     0 0 3px var(--nCyan),
     2px 3px 5px var(--nCyan);
-  transition: color 0.12s ease-in-out, text-shadow 0.12s ease-in-out, transform 0.12s ease-in-out;
   &:hover {
     color: var(--nCyan);
-    text-shadow: 4px 4px 4px #666;
-    transform: translate(-1px, -1px);
   }
 }
 
@@ -38,7 +39,7 @@
   }
 }
 
-.bka-transparent-btn-indigo {
+.bka-transparent-btn-purple {
   text-shadow: 0 0 1px var(--nPurple),
     0 0 2px var(--nPurple),
     0 0 3px var(--nPurple),

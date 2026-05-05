@@ -1,7 +1,6 @@
 .bka-action-btn {
   background-color: transparent;
   border: none;
-  color: var(--lime);
   cursor: pointer;
   margin: auto 0;
   outline: transparent;
@@ -10,10 +9,6 @@
 
   &:hover {
     filter: brightness(1.25);
-  }
-
-  &:i {
-    color: var(--lime);
   }
 
   &:disabled {
@@ -39,5 +34,12 @@
   color: var(--candy);
   &:i {
     color: var(--candy);
+  }
+}
+
+.bka-action-btn--purple {
+  color: var(--nPurple);
+  &:i {
+    color: var(--nPurple);
   }
 }

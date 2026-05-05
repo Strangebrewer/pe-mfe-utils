@@ -31,7 +31,7 @@
 
   &:hover:enabled {
     background-color: var(--nCyan);
-    color: #0d0a14;
+    color: var(--baseBg);
   }
 }
 
@@ -41,7 +41,7 @@
 
   &:hover:enabled {
     background-color: var(--lime);
-    color: #0d0a14;
+    color: var(--baseBg);
   }
 }
 
@@ -51,7 +51,7 @@
 
   &:hover:enabled {
     background-color: var(--candy);
-    color: #fff;
+    color: var(--textPrimary);
   }
 }
 
@@ -61,17 +61,7 @@
 
   &:hover:enabled {
     background-color: var(--yellow);
-    color: #000;
-  }
-}
-
-.button-lime {
-  border: 1px solid var(--lime);
-  color: var(--lime);
-
-  &:hover:enabled {
-    background-color: var(--lime);
-    color: #0d0a14;
+    color: var(--baseBg);
   }
 }
 
@@ -81,7 +71,7 @@
 
   &:hover:enabled {
     background-color: var(--nPurple);
-    color: #fff;
+    color: var(--textPrimary);
   }
 }
 
@@ -91,6 +81,6 @@
 
   &:hover:enabled {
     background-color: var(--slate);
-    color: #000;
+    color: var(--baseBg);
   }
 }

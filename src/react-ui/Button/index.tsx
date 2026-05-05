@@ -4,8 +4,7 @@ import "./styles.css";
 
 type ButtonProps = {
   text: string;
-  variant: 'blue' | 'green' | 'red' | 'grey' | 'lime' | 'purple' | 'yellow';
-  color?: string;
+  color: 'blue' | 'green' | 'red' | 'grey' | 'purple' | 'yellow';
   small?: boolean;
   last?: boolean;
   disabled?: boolean;
@@ -14,24 +13,20 @@ type ButtonProps = {
 
 const Button: FC<ButtonProps> = ({
   text,
-  variant,
-  color,
+  color = 'blue',
   small = false,
   last = false,
   disabled = false,
   onClick,
 }) => {
-  const style: Obj = {};
-  if (color) style.color = color;
   return (
     <button
       className={`
         button-base
         ${small ? 'button-small' : ''}
         ${last ? 'button-last' : ''}
-        button-${variant}
+        button-${color}
       `}
-      {...style}
       onClick={onClick}
       disabled={disabled}
     >

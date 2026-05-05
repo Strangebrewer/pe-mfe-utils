@@ -4,7 +4,7 @@ import "./styles.css";
 type GhostButtonProps = {
   onClick: (event?: any) => any;
   text: string;
-  color?: 'violet' | 'cyan' | 'lime' | 'red' | 'grey';
+  color?: 'purple' | 'blue' | 'green' | 'red' | 'grey';
   size?: 'sm' | 'md';
   last?: boolean;
   disabled?: boolean;

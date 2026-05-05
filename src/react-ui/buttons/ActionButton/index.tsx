@@ -5,7 +5,7 @@ type ActionButtonProps = {
   iconClass?: string;
   text?: string;
   onClick: () => any;
-  color?: 'blue' | 'red' | 'green';
+  color?: 'blue' | 'red' | 'green' | 'purple';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   title?: string;
 }

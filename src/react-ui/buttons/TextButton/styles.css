@@ -5,6 +5,9 @@
   cursor: pointer;
   padding: 0 6px;
   margin: 0 12px;
+}
+
+.bka-text-btn-blue {
   color: var(--nCyan);
   &:hover {
     text-shadow: 0 0 6px var(--nCyanAlpha);
@@ -18,7 +21,7 @@
   }
 }
 
-.bka-text-btn-indigo {
+.bka-text-btn-purple {
   color: var(--nPurple);
   &:hover {
     text-shadow: 0 0 6px var(--nPurpleAlpha);

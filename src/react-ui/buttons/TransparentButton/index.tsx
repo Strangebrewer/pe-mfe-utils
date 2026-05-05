@@ -4,7 +4,7 @@ import "./styles.css";
 type TransparentButtonProps = {
   onClick: () => any;
   text: string;
-  color?: 'blue' | 'red' | 'indigo' | 'green';
+  color?: 'blue' | 'red' | 'purple' | 'green';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   title?: string;
 };
