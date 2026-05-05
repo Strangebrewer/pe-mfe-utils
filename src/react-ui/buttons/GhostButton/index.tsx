@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import "./styles.css";
 
 type GhostButtonProps = {
-  onClick: () => any;
+  onClick: (event?: any) => any;
   text: string;
   color?: 'violet' | 'cyan' | 'lime' | 'red' | 'grey';
   size?: 'sm' | 'md';
