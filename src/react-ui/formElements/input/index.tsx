@@ -8,6 +8,7 @@ type InputProps = {
   onChange: (e: any) => any;
   full?: boolean | "true";
   autofocus?: boolean;
+  required?: boolean;
 }
 
 const Input: FC<InputProps> = ({
@@ -17,6 +18,7 @@ const Input: FC<InputProps> = ({
   onChange,
   full = false,
   autofocus = false,
+  required = false
 }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -33,6 +35,7 @@ const Input: FC<InputProps> = ({
       value={value}
       onChange={onChange}
       ref={inputRef}
+      required={required}
     />
   );
 };
