@@ -1,4 +1,10 @@
 :root {
+  /* dark theme palette */
+  --baseBg: #0d0a14;
+  --surface: #1a0f2e;
+  --textPrimary: #f0e6ff;
+  --textMuted: #c4b5fd;
+
   /* basic colors */
   --blue: #0000ff;
   --red: #ff0000;

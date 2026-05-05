@@ -6,12 +6,10 @@
 }
 
 .bka-form-element {
-  background-color: #ddd;
-  border: none;
+  background-color: var(--baseBg);
+  border: 1px solid var(--nPurpleAlpha);
   border-radius: 4px;
-  box-shadow: inset 3px 3px 2px #aaa,
-    inset -3px -3px 2px #fff;
-  color: var(--indigo);
+  color: var(--textPrimary);
   font-weight: 500;
   outline: transparent;
   padding: 6px 10px;
