@@ -9,7 +9,7 @@ type ButtonProps = {
   small?: boolean;
   last?: boolean;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: (event?: any) => void;
 }
 
 const Button: FC<ButtonProps> = ({
