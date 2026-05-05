@@ -1,6 +1,6 @@
 .bka-label {
   display: block;
-  font-size: .9rem;
+  font-size: 14px;
   margin-bottom: 4px;
   width: 100%;
 }
@@ -9,8 +9,8 @@
   background-color: var(--baseBg);
   border: 1px solid var(--textPrimary);
   border-radius: 4px;
-  color: var(--textPrimary);
-  font-weight: 500;
+  color: var(--nBlue);
+  font-weight: 400;
   outline: transparent;
   padding: 6px 10px;
 }
@@ -23,7 +23,7 @@
 
 .bka-select {
   color: var(--nBlue);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .bka-textarea {
