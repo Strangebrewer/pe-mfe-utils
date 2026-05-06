@@ -1,7 +1,7 @@
 :root {
   /* dark theme palette */
-  --baseBg: #0D0A14;
-  --surface: #1A0F2E;
+  --baseBg: #0d0a14;
+  --surface: #1a0f2e;
   --textPrimary: #F0E6FF;
   --textMuted: #C4B5FD;
 
@@ -14,7 +14,7 @@
   --nCyan: #00E5FF;
   --nCyanAlpha: #00E5FF77;
   --nCyanBorder: #00E5FF4d;
-  --nCyanFaint: #00E5FF19;
+  --nCyanFaint: #00e5ff19;
   
   --lime: #51CB20;
   --limeAlpha: #51CB2077;
@@ -24,7 +24,7 @@
   --nPurple: #BC13FE;
   --nPurpleAlpha: #BC13FE77;
   --nPurpleBorder: #BC13FE4d;
-  --nPurpleFaint: #BC13FE19;
+  --nPurpleFaint: #bc13fe19;
 
   --slate: #69747C;
   --slateAlpha: #69747C77;
