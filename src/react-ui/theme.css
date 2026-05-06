@@ -1,9 +1,35 @@
 :root {
   /* dark theme palette */
-  --baseBg: #0d0a14;
-  --surface: #1a0f2e;
-  --textPrimary: #f0e6ff;
-  --textMuted: #c4b5fd;
+  --baseBg: #0D0A14;
+  --surface: #1A0F2E;
+  --textPrimary: #F0E6FF;
+  --textMuted: #C4B5FD;
+
+  /* main colors */
+  --candy: #E22C5A;
+  --candyAlpha: #E22C5A77;
+  --candyBorder: #E22C5A4d;
+  --candyFaint: #E22C5A19;
+  
+  --nCyan: #00E5FF;
+  --nCyanAlpha: #00E5FF77;
+  --nCyanBorder: #00E5FF4d;
+  --nCyanFaint: #00E5FF19;
+  
+  --lime: #51CB20;
+  --limeAlpha: #51CB2077;
+  --limeBorder: #51CB204d;
+  --limeFaint: #51CB2019;
+
+  --nPurple: #BC13FE;
+  --nPurpleAlpha: #BC13FE77;
+  --nPurpleBorder: #BC13FE4d;
+  --nPurpleFaint: #BC13FE19;
+
+  --slate: #69747C;
+  --slateAlpha: #69747C77;
+  --slateBorder: #69747C4d;
+  --slateFaint: #69747C19;
 
   /* basic colors */
   --blue: #0000ff;
@@ -16,13 +42,8 @@
   /* button colors */
   --dodgerblue: #1e90ff;
   --dodgerblueAlpha: #1e90ff77;
-  --candy: #e22c5a;
-  --candyAlpha: #e22c5a77;
-  --slate: #69747C;
-  --slateAlpha: #69747C77;
   --greenAlpha: #00940077;
   --yellowAlpha: #ffff0077;
-  --limeAlpha: #51CB2077;
   --purpleAlpha: #80008077;
   --indigo: #4b0082;
   --indigoAlpha: #4b008277;
@@ -33,15 +54,11 @@
   --nYellow: #CCFF00;
   --nOrange: #FF9933;
   --nPurple: #BC13FE;
-  --nPurpleAlpha: #BC13FE77;
   --nGreen: #39FF14;
-  --nCyan: #00E5FF;
-  --nCyanAlpha: #00E5FF77;
 
   /* other colors I like */
   --rose: #F72585;
   --carrot: #F18F01;
-  --lime: #51CB20;
   --dukeblue: #03045E;
   --darkpurple: #37123C;
   --blood: #890000;
