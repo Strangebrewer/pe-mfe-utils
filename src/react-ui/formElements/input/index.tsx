@@ -9,6 +9,8 @@ type InputProps = {
   full?: boolean | "true";
   autofocus?: boolean;
   required?: boolean;
+  step?: string;
+  placeholder?: string;
 }
 
 const Input: FC<InputProps> = ({
@@ -18,7 +20,9 @@ const Input: FC<InputProps> = ({
   onChange,
   full = false,
   autofocus = false,
-  required = false
+  required = false,
+  step,
+  placeholder,
 }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -27,6 +31,9 @@ const Input: FC<InputProps> = ({
       requestAnimationFrame(() => inputRef.current?.focus());
     }
   }, [autofocus]);
+  const props: Record<string, any> = {};
+  if (step) props.step = step;
+  if (placeholder) props.placeholder = placeholder;
   return (
     <input
       className={`bka-form-element ${full ? 'bka-form-element-full' : ''}`}
@@ -36,6 +43,7 @@ const Input: FC<InputProps> = ({
       onChange={onChange}
       ref={inputRef}
       required={required}
+      {...props}
     />
   );
 };
