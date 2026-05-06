@@ -3,6 +3,7 @@ import "./styles.css";
 
 type TextButtonProps = {
   onClick: () => any;
+  type: 'button' | 'submit' | 'reset';
   text: string;
   color?: 'blue' | 'red' | 'purple' | 'green';
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -11,6 +12,7 @@ type TextButtonProps = {
 
 const TextButton: FC<TextButtonProps> = ({
   onClick,
+  type = 'button',
   text,
   color = 'blue',
   size = 'md',
@@ -25,6 +27,7 @@ const TextButton: FC<TextButtonProps> = ({
   
   return (
     <button
+      type={type}
       style={style}
       title={title}
       className={`bka-text-btn bka-text-btn-${color}`}

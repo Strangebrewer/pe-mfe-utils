@@ -4,6 +4,7 @@ import "./styles.css";
 type TransparentButtonProps = {
   onClick: () => any;
   text: string;
+  type: 'button' | 'submit' | 'reset';
   color?: 'blue' | 'red' | 'purple' | 'green';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   title?: string;
@@ -12,6 +13,7 @@ type TransparentButtonProps = {
 const TransparentButton: FC<TransparentButtonProps> = ({
   onClick,
   text,
+  type,
   color = 'blue',
   size = 'md',
   title,
@@ -24,6 +26,7 @@ const TransparentButton: FC<TransparentButtonProps> = ({
   }
   return (
     <button
+      type={type}
       style={style}
       title={title}
       className={`bka-transparent-btn bka-transparent-btn-${color}`}

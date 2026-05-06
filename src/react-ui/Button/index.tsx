@@ -5,6 +5,7 @@ import "./styles.css";
 type ButtonProps = {
   text: string;
   color: 'blue' | 'green' | 'red' | 'grey' | 'purple' | 'yellow';
+  type: 'button' | 'submit' | 'reset';
   small?: boolean;
   last?: boolean;
   disabled?: boolean;
@@ -14,6 +15,7 @@ type ButtonProps = {
 const Button: FC<ButtonProps> = ({
   text,
   color = 'blue',
+  type = 'button',
   small = false,
   last = false,
   disabled = false,
@@ -21,6 +23,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      type={type}
       className={`
         button-base
         ${small ? 'button-small' : ''}

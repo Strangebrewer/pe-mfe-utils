@@ -4,6 +4,7 @@ import "./styles.css";
 type ActionButtonProps = {
   iconClass?: string;
   text?: string;
+  type: 'button' | 'submit' | 'reset';
   onClick: () => any;
   color?: 'blue' | 'red' | 'green' | 'purple';
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -13,6 +14,7 @@ type ActionButtonProps = {
 const ActionButton: FC<ActionButtonProps> = ({
   iconClass,
   color = 'green',
+  type = 'button',
   size = 'md',
   text,
   onClick,
@@ -27,6 +29,7 @@ const ActionButton: FC<ActionButtonProps> = ({
 
   return (
     <button
+      type={type}
       style={style}
       title={title}
       className={`bka-action-btn bka-action-btn--${color}`}
