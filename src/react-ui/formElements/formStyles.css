@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.bka-label-inline {
+  display: inline-block;
+}
+
 .bka-form-element {
   background-color: var(--baseBg);
   border: 1px solid var(--textPrimary);
