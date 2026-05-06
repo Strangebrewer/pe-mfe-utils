@@ -3,48 +3,51 @@
   outline: transparent;
   border: none;
   cursor: pointer;
-  color: #fff;
   padding: 0 6px;
   margin: 0 12px;
   transition: color 0.12s ease-in-out, text-shadow 0.12s ease-in-out, transform 0.12s ease-in-out;
 }
 
 .bka-transparent-btn-blue {
-  text-shadow: 0 0 1px var(--nCyan),
-    0 0 2px var(--nCyan),
-    0 0 3px var(--nCyan),
-    2px 3px 5px var(--nCyan);
+  text-shadow: 0 0 1px var(--nCyanAlpha),
+    0 0 2px var(--nCyanAlpha),
+    0 0 3px var(--nCyanAlpha),
+    2px 3px 5px var(--nCyanAlpha);
+  color: var(--nCyan);
   &:hover {
-    color: var(--nCyan);
+    color: var(--textPrimary);
   }
 }
 
 .bka-transparent-btn-red {
-  text-shadow: 0 0 1px var(--candy),
-    0 0 2px var(--candy),
-    0 0 3px var(--candy),
-    2px 3px 5px var(--candy);
+  text-shadow: 0 0 1px var(--candyAlpha),
+    0 0 2px var(--candyAlpha),
+    0 0 3px var(--candyAlpha),
+    2px 3px 5px var(--candyAlpha);
+  color: var(--candy);
   &:hover {
-    color: var(--candy);
+    color: var(--textPrimary);
   }
 }
 
 .bka-transparent-btn-green {
-  text-shadow: 0 0 1px var(--lime),
-    0 0 2px var(--lime),
-    0 0 3px var(--lime),
-    2px 3px 5px var(--lime);
+  text-shadow: 0 0 1px var(--limeAlpha),
+    0 0 2px var(--limeAlpha),
+    0 0 3px var(--limeAlpha),
+    2px 3px 5px var(--limeAlpha);
+  color: var(--lime);
   &:hover {
-    color: var(--lime);
+    color: var(--textPrimary);
   }
 }
 
 .bka-transparent-btn-purple {
-  text-shadow: 0 0 1px var(--nPurple),
-    0 0 2px var(--nPurple),
-    0 0 3px var(--nPurple),
-    2px 3px 5px var(--nPurple);
+  text-shadow: 0 0 1px var(--nPurpleAlpha),
+    0 0 2px var(--nPurpleAlpha),
+    0 0 3px var(--nPurpleAlpha),
+    2px 3px 5px var(--nPurpleAlpha);
+  color: var(--nPurple);
   &:hover {
-    color: var(--nPurple);
+    color: var(--textPrimary);
   }
 }
