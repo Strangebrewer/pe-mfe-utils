@@ -3,8 +3,8 @@ import "./styles.css";
 
 type TextButtonProps = {
   onClick: () => any;
-  type: 'button' | 'submit' | 'reset';
   text: string;
+  type?: 'button' | 'submit' | 'reset';
   color?: 'blue' | 'red' | 'purple' | 'green';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   title?: string;

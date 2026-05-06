@@ -5,7 +5,7 @@ import "./styles.css";
 type ButtonProps = {
   text: string;
   color: 'blue' | 'green' | 'red' | 'grey' | 'purple' | 'yellow';
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
   small?: boolean;
   last?: boolean;
   disabled?: boolean;
