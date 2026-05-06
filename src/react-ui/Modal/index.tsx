@@ -33,6 +33,7 @@ const Modal: FC<ModalProps> = ({
       </div>
     )
   }
+  
   return createPortal(modalWrapper(), document.body);
 }
 

@@ -60,7 +60,7 @@
 }
 
 .bka-ghost-btn-grey {
-  border: 1px solid var(----slateAlpha);
+  border: 1px solid var(--slateAlpha);
   color: var(--slate);
 
   &:hover:enabled {
