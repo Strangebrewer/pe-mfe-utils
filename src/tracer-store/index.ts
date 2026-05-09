@@ -22,3 +22,9 @@ export const useTracerStore = create<TracerStore>((set) => ({
       traces: state.traces.filter((t: Trace) => t.id !== trace.id),
     })),
 }));
+
+export function startTrace(label: string) {
+  const traceId = crypto.randomUUID();
+  useTracerStore.getState().addTraceId({ id: traceId, label });
+  return traceId;
+}
