@@ -1,5 +1,6 @@
 export { default as Button } from "./Button/index";
 export { default as Card } from "./cards/Card";
+export { default as ItemCard } from "./cards/ItemCard";
 export { default as Modal } from "./modals/Modal";
 export { default as DeleteConfirmationModal } from "./modals/DeleteConfirmationModal";
 export { default as ActionButton } from "./buttons/ActionButton/index";
