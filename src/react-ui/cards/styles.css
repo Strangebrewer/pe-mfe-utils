@@ -1,6 +1,6 @@
 .bka-card {
   background-color: var(--surface);
-  border: 1px solid var(--nPurple);
+  border: 1px solid var(--nPurpleBorder);
   border-radius: 8px;
   padding: 36px;
   padding-top: 24px;
