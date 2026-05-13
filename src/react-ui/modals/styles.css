@@ -4,8 +4,12 @@
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1 }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .bka-modal-wrapper {
@@ -24,7 +28,8 @@
 .bka-modal-body {
   background: var(--surface);
   border: 1px solid var(--nPurple);
-  box-shadow: 2px 2px 6px #000,
+  box-shadow:
+    2px 2px 6px #000,
     4px 4px 12px #666,
     6px 6px 18px #666,
     inset -2px -2px 6px var(--nPurple),
@@ -58,5 +63,32 @@
 
   &:hover {
     color: var(--textPrimary);
+  }
+}
+
+.bka-modal---delete-confirmation {
+  padding: 32px 48px;
+  width: 440px;
+
+  & > p:first-of-type {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  & > p:last-of-type {
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--nCyan);
+
+    & > span {
+      color: var(--textPrimary);
+    }
+  }
+
+  & > div {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-top: 4px;
   }
 }
