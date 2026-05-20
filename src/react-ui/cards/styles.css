@@ -3,12 +3,12 @@
   border: 1px solid var(--nPurpleBorder);
   border-radius: 8px;
   box-shadow: 0 0 24px var(--nPurpleBorder);
-  font-weight: 700;
   padding: 36px;
   padding-top: 24px;
 
   & > h2:first-of-type {
     margin-bottom: 12px;
+    font-weight: 700;
     text-align: center;
   }
 }
