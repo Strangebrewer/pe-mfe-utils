@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import "../formStyles.css";
 
 type InputProps = {
@@ -6,7 +6,6 @@ type InputProps = {
   name: string;
   value: any;
   onChange: (e: any) => any;
-  onKeyDown?: (e: any) => any;
   full?: boolean | "true";
   autofocus?: boolean;
   required?: boolean;
@@ -16,57 +15,43 @@ type InputProps = {
   max?: string;
 };
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      type = "text",
-      name,
-      value,
-      onChange,
-      onKeyDown,
-      full = false,
-      autofocus = false,
-      required = false,
-      step,
-      placeholder,
-      min,
-      max,
-    },
-    forwardedRef,
-  ) => {
-    const localRef = React.useRef<HTMLInputElement | null>(null);
+const Input: FC<InputProps> = ({
+  type = "text",
+  name,
+  value,
+  onChange,
+  full = false,
+  autofocus = false,
+  required = false,
+  step,
+  placeholder,
+  min,
+  max,
+}) => {
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
-    const mergedRef = (node: HTMLInputElement | null) => {
-      localRef.current = node;
-      if (typeof forwardedRef === "function") forwardedRef(node);
-      else if (forwardedRef) forwardedRef.current = node;
-    };
-
-    useEffect(() => {
-      if (autofocus) {
-        requestAnimationFrame(() => localRef.current?.focus());
-      }
-    }, [autofocus]);
-
-    const props: Record<string, any> = {};
-    if (step) props.step = step;
-    if (placeholder) props.placeholder = placeholder;
-    if (min) props.min = min;
-    if (max) props.max = max;
-    if (onKeyDown) props.onKeyDown = onKeyDown;
-    return (
-      <input
-        className={`bka-form-element ${full ? "bka-form-element-full" : ""}`}
-        type={type}
-        name={name}
-        value={value}
-        onChange={onChange}
-        ref={mergedRef}
-        required={required}
-        {...props}
-      />
-    );
-  },
-);
+  useEffect(() => {
+    if (autofocus) {
+      requestAnimationFrame(() => inputRef.current?.focus());
+    }
+  }, [autofocus]);
+  const props: Record<string, any> = {};
+  if (step) props.step = step;
+  if (placeholder) props.placeholder = placeholder;
+  if (min) props.min = min;
+  if (max) props.max = max;
+  return (
+    <input
+      className={`bka-form-element ${full ? "bka-form-element-full" : ""}`}
+      type={type}
+      name={name}
+      value={value}
+      onChange={onChange}
+      ref={inputRef}
+      required={required}
+      {...props}
+    />
+  );
+};
 
 export default Input;
