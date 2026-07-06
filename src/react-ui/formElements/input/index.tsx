@@ -23,6 +23,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
       name,
       value,
       onChange,
+      onKeyDown,
       full = false,
       autofocus = false,
       required = false,
@@ -52,6 +53,7 @@ const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
     if (placeholder) props.placeholder = placeholder;
     if (min) props.min = min;
     if (max) props.max = max;
+    if (onKeyDown) props.onKeyDown = onKeyDown;
     return (
       <input
         className={`bka-form-element ${full ? "bka-form-element-full" : ""}`}
