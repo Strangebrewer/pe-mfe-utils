@@ -2,7 +2,7 @@ import React, { FC, useEffect } from "react";
 import "../formStyles.css";
 
 type InputProps = {
-  type: string;
+  type?: string;
   name: string;
   value: any;
   onChange: (e: any) => any;
