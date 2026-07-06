@@ -42,10 +42,10 @@
   padding: 0;
   position: relative;
   z-index: 9999;
+}
 
-  &:img {
-    border: 1px solid black;
-  }
+.bka-modal-body > img {
+  border: 1px solid black;
 }
 
 .bka-modal-x-btn {
@@ -69,26 +69,26 @@
 .bka-modal---delete-confirmation {
   padding: 32px 48px;
   width: 440px;
+}
 
-  &:p:first-of-type {
-    margin-bottom: 8px;
-    text-align: center;
-  }
+.bka-modal---delete-confirmation > p:first-of-type {
+  margin-bottom: 8px;
+  text-align: center;
+}
 
-  &:p:last-of-type {
-    margin-bottom: 24px;
-    text-align: center;
-    color: var(--nCyan);
+.bka-modal---delete-confirmation > p:last-of-type {
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--nCyan);
+}
 
-    &:span {
-      color: var(--textPrimary);
-    }
-  }
+.bka-modal---delete-confirmation > p:last-of-type > span {
+  color: var(--textPrimary);
+}
 
-  &:div {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding-top: 4px;
-  }
+.bka-modal---delete-confirmation > div {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 4px;
 }

@@ -18,28 +18,32 @@
 
 .bka-action-btn--blue {
   color: var(--nCyan);
-  &:i {
-    color: var(--nCyan);
-  }
+}
+
+.bka-action-btn--blue > i {
+  color: var(--nCyan);
 }
 
 .bka-action-btn--green {
   color: var(--lime);
-  &:i {
-    color: var(--lime);
-  }
+}
+
+.bka-action-btn--green > i {
+  color: var(--lime);
 }
 
 .bka-action-btn--red {
   color: var(--candy);
-  &:i {
-    color: var(--candy);
-  }
+}
+
+.bka-action-btn--red > i {
+  color: var(--candy);
 }
 
 .bka-action-btn--purple {
   color: var(--nPurple);
-  &:i {
-    color: var(--nPurple);
-  }
+}
+
+.bka-action-btn--purple > i {
+  color: var(--nPurple);
 }

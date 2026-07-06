@@ -5,13 +5,13 @@
   box-shadow: 0 0 24px var(--nPurpleBorder);
   padding: 36px;
   padding-top: 24px;
+}
 
-  &:h2:first-of-type {
-    margin-bottom: 12px;
-    font-weight: 700;
-    text-align: center;
-    color: green;
-  }
+.bka-card > h2:first-of-type {
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: green;
 }
 
 .bka-card-heading--sm {
