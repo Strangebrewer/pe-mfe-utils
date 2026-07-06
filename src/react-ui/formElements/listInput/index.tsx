@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { FC, useRef } from "react";
 import "../formStyles.css";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   placeholder?: string;
 };
 
-export default function ListInput({ items, onChange, placeholder }: Props) {
+const ListInput: FC<Props> = ({ items, onChange, placeholder }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -41,4 +41,6 @@ export default function ListInput({ items, onChange, placeholder }: Props) {
       />
     </div>
   );
-}
+};
+
+export default ListInput;

@@ -8,6 +8,7 @@ export { default as GhostButton } from "./buttons/GhostButton/index";
 export { default as TextButton } from "./buttons/TextButton/index";
 export { default as TransparentButton } from "./buttons/TransparentButton/index";
 export { default as Input } from "./formElements/input/index";
+export { default as ListInput } from "./formElements/listInput/index";
 export { default as Label } from "./formElements/label/index";
 export { default as Select } from "./formElements/select/index";
 export { default as Textarea } from "./formElements/textarea/index";
