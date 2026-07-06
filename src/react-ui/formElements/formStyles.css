@@ -40,7 +40,7 @@
   flex-direction: column;
   gap: 4px;
 
-  > div {
+  & > div {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -48,13 +48,13 @@
     border-radius: 4px;
     padding: 6px 12px;
 
-    > span {
+    & > span {
       flex: 1;
       font-size: 14px;
       color: #f0e6ff;
     }
 
-    > button {
+    & > button {
       color: #e22c5a;
 
       &:hover {
@@ -63,13 +63,5 @@
         line-height: 1;
       }
     }
-  }
-
-  > input {
-    border: 1px solid #bc13fe;
-    border-radius: 4px;
-    display: block;
-    font-size: 14px;
-    font-weight: 400px;
   }
 }

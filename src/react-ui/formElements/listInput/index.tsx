@@ -44,6 +44,7 @@ const ListInput: FC<Props> = ({
         ref={inputRef}
         onKeyDown={handleKeyDown}
         placeholder={placeholder ?? "Type and press Enter to add"}
+        className={`bka-form-element ${full ? "bka-form-element-full" : ""}`}
       />
     </div>
   );
