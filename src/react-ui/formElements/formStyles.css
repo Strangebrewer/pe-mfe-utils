@@ -45,8 +45,8 @@
     align-items: center;
     gap: 8px;
     background-color: rgba(26, 15, 46, 0.8);
-    border-radius: 12px;
-    padding: 12px 6px;
+    border-radius: 4px;
+    padding: 6px 12px;
 
     > span {
       flex: 1;
@@ -67,6 +67,9 @@
 
   > input {
     border: 1px solid #bc13fe;
-    border-radius: 8px;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400px;
   }
 }

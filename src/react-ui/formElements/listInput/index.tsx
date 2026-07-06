@@ -5,9 +5,15 @@ type Props = {
   items: string[];
   onChange: (items: string[]) => void;
   placeholder?: string;
+  full?: boolean;
 };
 
-const ListInput: FC<Props> = ({ items, onChange, placeholder }) => {
+const ListInput: FC<Props> = ({
+  items,
+  onChange,
+  placeholder,
+  full = false,
+}) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
