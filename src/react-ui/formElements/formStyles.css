@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(26, 15, 46, 0.8);
+  background-color: #1a0f2ecc;
   border-radius: 4px;
   padding: 6px 12px;
 }
@@ -53,15 +53,13 @@
 .bka-list-input > div > span {
   flex: 1;
   font-size: 14px;
-  color: #00ff1e;
+  color: var(--textPrimary);
 }
 
 .bka-list-input > div > button {
-  color: #e22c5a;
+  color: var(--candy);
 
   &:hover {
-    color: #f0e6ff;
-    font-size: 12px;
-    line-height: 1;
+    color: var(--textPrimary);
   }
 }
