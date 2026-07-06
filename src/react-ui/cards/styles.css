@@ -6,7 +6,7 @@
   padding: 36px;
   padding-top: 24px;
 
-  & > h2:first-of-type {
+  &:h2:first-of-type {
     margin-bottom: 12px;
     font-weight: 700;
     text-align: center;
