@@ -16,7 +16,7 @@ type InputProps = {
   max?: string;
 };
 
-const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
+const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       type = "text",
