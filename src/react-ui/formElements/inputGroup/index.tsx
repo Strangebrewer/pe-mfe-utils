@@ -3,14 +3,14 @@ import Label from "../label";
 import "../formStyles.css";
 
 type Props = {
-  text: string;
+  label: string;
   children: ReactNode;
 };
 
-const InputGroup: FC<Props> = ({ text, children }) => {
+const InputGroup: FC<Props> = ({ label, children }) => {
   return (
     <div className="bka-input-group">
-      <Label text={text} />
+      <Label text={label} />
       {children}
     </div>
   );
