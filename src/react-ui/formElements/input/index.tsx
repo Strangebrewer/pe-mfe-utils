@@ -11,6 +11,8 @@ type InputProps = {
   required?: boolean;
   step?: string;
   placeholder?: string;
+  min?: string;
+  max?: string;
 };
 
 const Input: FC<InputProps> = ({
@@ -23,6 +25,8 @@ const Input: FC<InputProps> = ({
   required = false,
   step,
   placeholder,
+  min,
+  max,
 }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -34,6 +38,8 @@ const Input: FC<InputProps> = ({
   const props: Record<string, any> = {};
   if (step) props.step = step;
   if (placeholder) props.placeholder = placeholder;
+  if (min) props.min = min;
+  if (max) props.max = max;
   return (
     <input
       className={`bka-form-element ${full ? "bka-form-element-full" : ""}`}
