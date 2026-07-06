@@ -51,9 +51,9 @@
 .bka-modal-x-btn {
   background-color: transparent;
   border: none;
-  color: var(--textPrimary);
+  color: var(--textMuted);
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 400;
   margin: 0;
   outline: transparent;
   padding: 0;
@@ -63,6 +63,17 @@
 
   &:hover {
     color: var(--textPrimary);
+  }
+}
+
+.bka-modal-content {
+  padding: 36px;
+  & > h2 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--textPrimary);
+    margin-bottom: 8px;
   }
 }
 
