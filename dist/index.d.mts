@@ -1,5 +1,5 @@
 import * as _$zustand from "zustand";
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { AxiosInstance } from "axios";
 
 //#region src/jwt-auth/tokenStore.d.ts
@@ -51,6 +51,7 @@ declare function createAuthClient(options: CreateAuthClientOptions): {
 type User = {
   id: string;
   email: string;
+  isDemo?: boolean;
 };
 interface UserStore {
   user: User | null;
@@ -76,16 +77,31 @@ declare function RequireGuest({
 //#region src/react-ui/Button/index.d.ts
 type ButtonProps = {
   text: string;
-  variant: 'blue' | 'green' | 'red' | 'grey' | 'lime' | 'purple';
-  color?: string;
+  color: "blue" | "green" | "red" | "grey" | "purple" | "yellow";
+  type?: "button" | "submit" | "reset";
   small?: boolean;
   last?: boolean;
   disabled?: boolean;
-  onClick?: () => void;
+  onClick?: (event?: any) => void;
 };
 declare const Button: FC<ButtonProps>;
 //#endregion
-//#region src/react-ui/Modal/index.d.ts
+//#region src/react-ui/cards/Card.d.ts
+type Props$6 = {
+  children: React.ReactNode;
+  heading?: string;
+  size?: "sm" | "md" | "lg";
+};
+declare const Card: FC<Props$6>;
+//#endregion
+//#region src/react-ui/cards/ItemCard.d.ts
+type Props$5 = {
+  children: React.ReactNode;
+  onClick?: (e?: any) => void;
+};
+declare const ItemCard: FC<Props$5>;
+//#endregion
+//#region src/react-ui/modals/Modal.d.ts
 type ModalProps = {
   isOpen: boolean;
   children: React.ReactNode;
@@ -94,23 +110,65 @@ type ModalProps = {
 };
 declare const Modal: FC<ModalProps>;
 //#endregion
+//#region src/react-ui/modals/ModalContent.d.ts
+type Props$4 = {
+  heading?: string;
+  children: ReactNode;
+};
+declare const ModalContent: FC<Props$4>;
+//#endregion
+//#region src/react-ui/modals/ModalButtons.d.ts
+type Props$3 = {
+  onClose: () => void;
+  onConfirm?: () => void;
+  confirmText: string;
+  confirmColor?: string;
+  declineText?: string;
+  isDisabled?: boolean;
+};
+declare const ModalButtons: FC<Props$3>;
+//#endregion
+//#region src/react-ui/modals/DeleteConfirmationModal.d.ts
+type Props$2 = {
+  isOpen: boolean;
+  onClose: () => void;
+  onConfirm: () => void;
+  name?: string;
+};
+declare const DeleteConfirmationModal: FC<Props$2>;
+//#endregion
 //#region src/react-ui/buttons/ActionButton/index.d.ts
 type ActionButtonProps = {
   iconClass?: string;
   text?: string;
+  type?: "button" | "submit" | "reset";
   onClick: () => any;
-  color?: 'blue' | 'red' | 'green';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: "blue" | "red" | "green" | "purple";
+  size?: "sm" | "md" | "lg" | "xl";
   title?: string;
 };
 declare const ActionButton: FC<ActionButtonProps>;
+//#endregion
+//#region src/react-ui/buttons/GhostButton/index.d.ts
+type GhostButtonProps = {
+  onClick: (event?: any) => any;
+  text: string;
+  type?: "button" | "submit" | "reset";
+  color?: "purple" | "blue" | "green" | "red" | "grey";
+  size?: "sm" | "md";
+  last?: boolean;
+  disabled?: boolean;
+  title?: string;
+};
+declare const GhostButton: FC<GhostButtonProps>;
 //#endregion
 //#region src/react-ui/buttons/TextButton/index.d.ts
 type TextButtonProps = {
   onClick: () => any;
   text: string;
-  color?: 'blue' | 'red' | 'indigo' | 'green';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  type?: "button" | "submit" | "reset";
+  color?: "blue" | "red" | "purple" | "green";
+  size?: "sm" | "md" | "lg" | "xl";
   title?: string;
 };
 declare const TextButton: FC<TextButtonProps>;
@@ -119,32 +177,48 @@ declare const TextButton: FC<TextButtonProps>;
 type TransparentButtonProps = {
   onClick: () => any;
   text: string;
-  color?: 'blue' | 'red' | 'indigo' | 'green';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  type?: "button" | "submit" | "reset";
+  color?: "blue" | "red" | "purple" | "green";
+  size?: "sm" | "md" | "lg" | "xl";
   title?: string;
 };
 declare const TransparentButton: FC<TransparentButtonProps>;
 //#endregion
 //#region src/react-ui/formElements/input/index.d.ts
 type InputProps = {
-  type: string;
-  name: string;
+  type?: string;
+  name?: string;
   value: any;
   onChange: (e: any) => any;
   full?: boolean | "true";
   autofocus?: boolean;
+  required?: boolean;
+  step?: string;
+  placeholder?: string;
+  min?: string;
+  max?: string;
 };
 declare const Input: FC<InputProps>;
+//#endregion
+//#region src/react-ui/formElements/listInput/index.d.ts
+type Props$1 = {
+  items: string[];
+  onChange: (items: string[]) => void;
+  placeholder?: string;
+  full?: boolean;
+};
+declare const ListInput: FC<Props$1>;
 //#endregion
 //#region src/react-ui/formElements/label/index.d.ts
 type LabelProps = {
   text: string;
+  inline?: boolean;
 };
 declare const Label: FC<LabelProps>;
 //#endregion
 //#region src/react-ui/formElements/select/index.d.ts
 type SelectProps = {
-  name: string;
+  name?: string;
   value: any;
   onChange: (e: any) => any;
   full?: boolean | "true";
@@ -154,13 +228,22 @@ declare const Select: FC<SelectProps>;
 //#endregion
 //#region src/react-ui/formElements/textarea/index.d.ts
 type TextareaProps = {
-  name: string;
+  name?: string;
   value: any;
   onChange: (e: any) => any;
   full?: boolean | "true";
+  rows?: number;
   autofocus?: boolean;
+  placeholder?: string;
 };
 declare const Textarea: FC<TextareaProps>;
+//#endregion
+//#region src/react-ui/formElements/inputGroup/index.d.ts
+type Props = {
+  label: string;
+  children: ReactNode;
+};
+declare const InputGroup: FC<Props>;
 //#endregion
 //#region src/webpackConfigDefaults/index.d.ts
 interface WebpackConfigOptions {
@@ -176,19 +259,19 @@ declare const defaultShared: {
   react: {
     singleton: boolean;
   };
-  'react-dom': {
+  "react-dom": {
     singleton: boolean;
   };
-  'react-router-dom': {
+  "react-router-dom": {
     singleton: boolean;
   };
-  '@tanstack/react-query': {
+  "@tanstack/react-query": {
     singleton: boolean;
   };
   zustand: {
     singleton: boolean;
   };
-  '@bka-stuff/pe-mfe-utils': {
+  "@bka-stuff/pe-mfe-utils": {
     singleton: boolean;
   };
 };
@@ -210,7 +293,7 @@ declare function createWebpackConfig(options: WebpackConfigOptions): {
     alias: {
       axios: string;
       react: string;
-      'react-dom': string;
+      "react-dom": string;
     };
   };
   module: {
@@ -242,11 +325,24 @@ declare function createWebpackConfig(options: WebpackConfigOptions): {
       };
     };
     headers: {
-      'Access-Control-Allow-Origin': string;
-      'Access-Control-Allow-Methods': string;
-      'Access-Control-Allow-Headers': string;
+      "Access-Control-Allow-Origin": string;
+      "Access-Control-Allow-Methods": string;
+      "Access-Control-Allow-Headers": string;
     };
   };
 };
 //#endregion
-export { ActionButton, Button, Input, Label, Modal, RequireAuth, RequireGuest, Select, TextButton, Textarea, TokenExchangeResponse, TokenKeys, TransparentButton, UserStore, createAuthClient, createTokenStore, createWebpackConfig, defaultShared, exchangeRefreshToken, isTokenExpired, useUserStore };
+//#region src/tracer-store/index.d.ts
+type Trace = {
+  id: string;
+  label: string;
+};
+interface TracerStore {
+  traces: Trace[];
+  addTraceId: (trace: Trace) => void;
+  removeTraceId: (trace: Trace) => void;
+}
+declare const useTracerStore: _$zustand.UseBoundStore<_$zustand.StoreApi<TracerStore>>;
+declare function startTrace(label: string): `${string}-${string}-${string}-${string}-${string}`;
+//#endregion
+export { ActionButton, Button, Card, DeleteConfirmationModal, GhostButton, Input, InputGroup, ItemCard, Label, ListInput, Modal, ModalButtons, ModalContent, RequireAuth, RequireGuest, Select, TextButton, Textarea, TokenExchangeResponse, TokenKeys, TracerStore, TransparentButton, UserStore, createAuthClient, createTokenStore, createWebpackConfig, defaultShared, exchangeRefreshToken, isTokenExpired, startTrace, useTracerStore, useUserStore };

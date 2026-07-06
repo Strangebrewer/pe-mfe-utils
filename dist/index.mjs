@@ -1,6 +1,6 @@
 import { jwtDecode } from "jwt-decode";
 import { create } from "zustand";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { createPortal } from "react-dom";
 //#region src/jwt-auth/tokenStore.ts
@@ -164,23 +164,34 @@ function RequireGuest({ redirectUrl = "/dashboard" }) {
 }
 //#endregion
 //#region src/react-ui/Button/index.tsx
-const Button = ({ text, variant, color, small = false, last = false, disabled = false, onClick }) => {
-	const style = {};
-	if (color) style.color = color;
+const Button = ({ text, color = "blue", type = "button", small = false, last = false, disabled = false, onClick }) => {
 	return /* @__PURE__ */ React.createElement("button", {
+		type,
 		className: `
         button-base
         ${small ? "button-small" : ""}
         ${last ? "button-last" : ""}
-        button-${variant}
+        button-${color}
       `,
-		...style,
 		onClick,
 		disabled
 	}, text);
 };
 //#endregion
-//#region src/react-ui/Modal/index.tsx
+//#region src/react-ui/cards/Card.tsx
+const Card = ({ heading, size = "md", children }) => {
+	return /* @__PURE__ */ React.createElement("div", { className: "bka-card" }, heading && /* @__PURE__ */ React.createElement("h2", { className: `bka-card-heading--${size}` }, heading), children);
+};
+//#endregion
+//#region src/react-ui/cards/ItemCard.tsx
+const ItemCard = ({ children, onClick }) => {
+	return /* @__PURE__ */ React.createElement("div", {
+		className: `bka-item-card ${!!onClick ? "bka-item-card-pointer" : ""}`,
+		onClick
+	}, children);
+};
+//#endregion
+//#region src/react-ui/modals/Modal.tsx
 const Modal = ({ isOpen, close, children, closeOnOutsideClick = true }) => {
 	if (!isOpen) return null;
 	function onClickOutside(e) {
@@ -198,8 +209,63 @@ const Modal = ({ isOpen, close, children, closeOnOutsideClick = true }) => {
 	return createPortal(modalWrapper(), document.body);
 };
 //#endregion
+//#region src/react-ui/modals/ModalContent.tsx
+const ModalContent = ({ heading, children }) => {
+	return /* @__PURE__ */ React.createElement("div", { className: "bka-modal-content" }, heading ? /* @__PURE__ */ React.createElement("h2", null, heading) : null, children);
+};
+//#endregion
+//#region src/react-ui/buttons/GhostButton/index.tsx
+const GhostButton = ({ onClick, text, type = "button", color = "violet", size = "md", last = false, disabled = false, title }) => {
+	return /* @__PURE__ */ React.createElement("button", {
+		title,
+		type,
+		disabled,
+		className: `bka-ghost-btn bka-ghost-btn-${color}${size === "sm" ? " bka-ghost-btn-small" : ""}${last ? " bka-ghost-btn-last" : ""}`,
+		onClick
+	}, text);
+};
+//#endregion
+//#region src/react-ui/modals/ModalButtons.tsx
+const ModalButtons = ({ onClose, onConfirm, declineText = "Cancel", confirmText, confirmColor = "green", isDisabled = false }) => {
+	const props = {};
+	if (typeof onConfirm === "function") props.onClick = onConfirm;
+	return /* @__PURE__ */ React.createElement("div", { className: "bka-modal-buttons" }, /* @__PURE__ */ React.createElement(GhostButton, {
+		color: "red",
+		text: declineText,
+		onClick: onClose
+	}), /* @__PURE__ */ React.createElement(Button, {
+		type: "submit",
+		color: confirmColor,
+		text: confirmText,
+		disabled: isDisabled,
+		last: true,
+		...props
+	}));
+};
+//#endregion
+//#region src/react-ui/modals/DeleteConfirmationModal.tsx
+const DeleteConfirmationModal = ({ isOpen, onClose, onConfirm, name }) => {
+	function handleConfirm() {
+		onConfirm();
+		onClose();
+	}
+	return /* @__PURE__ */ React.createElement(Modal, {
+		isOpen,
+		close: onClose
+	}, /* @__PURE__ */ React.createElement("div", { className: "bka-modal---delete-confirmation" }, /* @__PURE__ */ React.createElement("p", null, "Are you sure you want to delete"), /* @__PURE__ */ React.createElement("p", null, name, /* @__PURE__ */ React.createElement("span", null, "\xA0?")), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(GhostButton, {
+		color: "grey",
+		text: "Cancel",
+		onClick: onClose
+	}), /* @__PURE__ */ React.createElement(Button, {
+		color: "red",
+		text: "Delete",
+		onClick: handleConfirm,
+		last: true
+	}))));
+};
+//#endregion
 //#region src/react-ui/buttons/ActionButton/index.tsx
-const ActionButton = ({ iconClass, color = "green", size = "md", text, onClick, title }) => {
+const ActionButton = ({ iconClass, color = "green", type = "button", size = "md", text, onClick, title }) => {
 	const style = { fontSize: "12px" };
 	if (size !== "md") {
 		if (size === "sm") style.fontSize = "9px";
@@ -207,6 +273,7 @@ const ActionButton = ({ iconClass, color = "green", size = "md", text, onClick, 
 		if (size === "xl") style.fontSize = "18px";
 	}
 	return /* @__PURE__ */ React.createElement("button", {
+		type,
 		style,
 		title,
 		className: `bka-action-btn bka-action-btn--${color}`,
@@ -215,7 +282,7 @@ const ActionButton = ({ iconClass, color = "green", size = "md", text, onClick, 
 };
 //#endregion
 //#region src/react-ui/buttons/TextButton/index.tsx
-const TextButton = ({ onClick, text, color = "blue", size = "md", title }) => {
+const TextButton = ({ onClick, type = "button", text, color = "blue", size = "md", title }) => {
 	const style = { fontSize: "12px" };
 	if (size !== "md") {
 		if (size === "sm") style.fontSize = "8px";
@@ -223,6 +290,7 @@ const TextButton = ({ onClick, text, color = "blue", size = "md", title }) => {
 		if (size === "xl") style.fontSize = "20px";
 	}
 	return /* @__PURE__ */ React.createElement("button", {
+		type,
 		style,
 		title,
 		className: `bka-text-btn bka-text-btn-${color}`,
@@ -231,7 +299,7 @@ const TextButton = ({ onClick, text, color = "blue", size = "md", title }) => {
 };
 //#endregion
 //#region src/react-ui/buttons/TransparentButton/index.tsx
-const TransparentButton = ({ onClick, text, color = "blue", size = "md", title }) => {
+const TransparentButton = ({ onClick, text, type, color = "blue", size = "md", title }) => {
 	const style = { fontSize: "16px" };
 	if (size !== "md") {
 		if (size === "sm") style.fontSize = "12px";
@@ -239,6 +307,7 @@ const TransparentButton = ({ onClick, text, color = "blue", size = "md", title }
 		if (size === "xl") style.fontSize = "24px";
 	}
 	return /* @__PURE__ */ React.createElement("button", {
+		type,
 		style,
 		title,
 		className: `bka-transparent-btn bka-transparent-btn-${color}`,
@@ -247,24 +316,57 @@ const TransparentButton = ({ onClick, text, color = "blue", size = "md", title }
 };
 //#endregion
 //#region src/react-ui/formElements/input/index.tsx
-const Input = ({ type = "text", name, value, onChange, full = false, autofocus = false }) => {
+const Input = ({ type = "text", name, value, onChange, full = false, autofocus = false, required = false, step, placeholder, min, max }) => {
 	const inputRef = React.useRef(null);
 	useEffect(() => {
 		if (autofocus) requestAnimationFrame(() => inputRef.current?.focus());
 	}, [autofocus]);
+	const props = {};
+	if (step) props.step = step;
+	if (placeholder) props.placeholder = placeholder;
+	if (min) props.min = min;
+	if (max) props.max = max;
 	return /* @__PURE__ */ React.createElement("input", {
 		className: `bka-form-element ${full ? "bka-form-element-full" : ""}`,
 		type,
 		name,
 		value,
 		onChange,
-		ref: inputRef
+		ref: inputRef,
+		required,
+		...props
 	});
 };
 //#endregion
+//#region src/react-ui/formElements/listInput/index.tsx
+const ListInput = ({ items, onChange, placeholder, full = false }) => {
+	const inputRef = useRef(null);
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter") {
+			e.preventDefault();
+			const value = e.currentTarget.value.trim();
+			if (!value) return;
+			onChange([...items, value]);
+			e.currentTarget.value = "";
+		}
+	};
+	const remove = (index) => {
+		onChange(items.filter((_, i) => i !== index));
+	};
+	return /* @__PURE__ */ React.createElement("div", { className: "bka-list-input" }, items.map((item, i) => /* @__PURE__ */ React.createElement("div", { key: i }, /* @__PURE__ */ React.createElement("span", null, item), /* @__PURE__ */ React.createElement("button", {
+		type: "button",
+		onClick: () => remove(i)
+	}, "✕"))), /* @__PURE__ */ React.createElement("input", {
+		ref: inputRef,
+		onKeyDown: handleKeyDown,
+		placeholder: placeholder ?? "Type and press Enter to add",
+		className: `bka-form-element ${full ? "bka-form-element-full" : ""}`
+	}));
+};
+//#endregion
 //#region src/react-ui/formElements/label/index.tsx
-const Label = ({ text }) => {
-	return /* @__PURE__ */ React.createElement("label", { className: "bka-label" }, text);
+const Label = ({ text, inline }) => {
+	return /* @__PURE__ */ React.createElement("label", { className: `bka-label ${inline ? "bka-label-inline" : ""}` }, text);
 };
 //#endregion
 //#region src/react-ui/formElements/select/index.tsx
@@ -279,9 +381,11 @@ const Select = ({ name, value, onChange, full = false, children }) => {
 };
 //#endregion
 //#region src/react-ui/formElements/textarea/index.tsx
-const Textarea = ({ name, value, onChange, full = false, autofocus = false }) => {
+const Textarea = ({ name, value, onChange, full = false, rows = 2, autofocus = false, placeholder }) => {
 	const addedProps = {};
 	if (autofocus) addedProps.autoFocus = autofocus;
+	if (rows !== 0) addedProps.rows = rows;
+	if (placeholder) addedProps.placeholder = placeholder;
 	return /* @__PURE__ */ React.createElement("textarea", {
 		className: `bka-form-element bka-textarea ${full ? "bka-form-element-full" : ""}`,
 		name,
@@ -289,6 +393,11 @@ const Textarea = ({ name, value, onChange, full = false, autofocus = false }) =>
 		onChange,
 		...addedProps
 	});
+};
+//#endregion
+//#region src/react-ui/formElements/inputGroup/index.tsx
+const InputGroup = ({ label, children }) => {
+	return /* @__PURE__ */ React.createElement("div", { className: "bka-input-group" }, /* @__PURE__ */ React.createElement(Label, { text: label }), children);
 };
 //#endregion
 //#region src/webpackConfigDefaults/index.ts
@@ -364,4 +473,19 @@ function createWebpackConfig(options) {
 	};
 }
 //#endregion
-export { ActionButton, Button, Input, Label, Modal, RequireAuth, RequireGuest, Select, TextButton, Textarea, TransparentButton, createAuthClient, createTokenStore, createWebpackConfig, defaultShared, exchangeRefreshToken, isTokenExpired, useUserStore };
+//#region src/tracer-store/index.ts
+const useTracerStore = create((set) => ({
+	traces: [],
+	addTraceId: (trace) => set((state) => ({ traces: [...state.traces, trace] })),
+	removeTraceId: (trace) => set((state) => ({ traces: state.traces.filter((t) => t.id !== trace.id) }))
+}));
+function startTrace(label) {
+	const traceId = crypto.randomUUID();
+	useTracerStore.getState().addTraceId({
+		id: traceId,
+		label
+	});
+	return traceId;
+}
+//#endregion
+export { ActionButton, Button, Card, DeleteConfirmationModal, GhostButton, Input, InputGroup, ItemCard, Label, ListInput, Modal, ModalButtons, ModalContent, RequireAuth, RequireGuest, Select, TextButton, Textarea, TransparentButton, createAuthClient, createTokenStore, createWebpackConfig, defaultShared, exchangeRefreshToken, isTokenExpired, startTrace, useTracerStore, useUserStore };
