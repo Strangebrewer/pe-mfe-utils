@@ -22,7 +22,7 @@ const ModalButtons: FC<Props> = ({
   const props: any = {};
   if (typeof onConfirm === "function") props.onClick = onConfirm;
   return (
-    <div>
+    <div className="bka-modal-buttons">
       <GhostButton color="red" text={declineText} onClick={onClose} />
       <Button
         type="submit"
