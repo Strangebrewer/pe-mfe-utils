@@ -6,15 +6,11 @@
   padding: 36px;
   padding-top: 24px;
 
-  & > h2 {
-    color: green;
+  & > h2:first-of-type {
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-align: center;
   }
-}
-
-.bka-card > h2:first-of-type {
-  margin-bottom: 12px;
-  font-weight: 700;
-  text-align: center;
 }
 
 .bka-card-heading--sm {

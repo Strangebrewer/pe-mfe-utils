@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import "../formStyles.css";
 
 type TextareaProps = {
-  name: string;
+  name?: string;
   value: any;
   onChange: (e: any) => any;
   full?: boolean | "true";
