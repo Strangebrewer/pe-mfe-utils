@@ -2,34 +2,34 @@
   /* dark theme palette */
   --baseBg: #0d0a14;
   --surface: #1a0f2e;
-  --textPrimary: #F0E6FF;
-  --textMuted: #C4B5FD;
+  --textPrimary: #f0e6ff;
+  --textMuted: #c4b5fd;
 
   /* main colors */
-  --candy: #E22C5A;
-  --candyAlpha: #E22C5A77;
-  --candyBorder: #E22C5A4d;
-  --candyFaint: #E22C5A19;
-  
-  --nCyan: #00E5FF;
-  --nCyanAlpha: #00E5FF77;
-  --nCyanBorder: #00E5FF4d;
-  --nCyanFaint: #00e5ff19;
-  
-  --lime: #51CB20;
-  --limeAlpha: #51CB2077;
-  --limeBorder: #51CB204d;
-  --limeFaint: #51CB2019;
+  --candy: #e22c5a;
+  --candyAlpha: #e22c5a77;
+  --candyBorder: #e22c5a4d;
+  --candyFaint: #e22c5a19;
 
-  --nPurple: #BC13FE;
-  --nPurpleAlpha: #BC13FE77;
-  --nPurpleBorder: #BC13FE4d;
+  --nCyan: #00e5ff;
+  --nCyanAlpha: #00e5ff77;
+  --nCyanBorder: #00e5ff4d;
+  --nCyanFaint: #00e5ff19;
+
+  --lime: #51cb20;
+  --limeAlpha: #51cb2077;
+  --limeBorder: #51cb204d;
+  --limeFaint: #51cb2019;
+
+  --nPurple: #bc13fe;
+  --nPurpleAlpha: #bc13fe77;
+  --nPurpleBorder: #bc13fe4d;
   --nPurpleFaint: #bc13fe19;
 
-  --slate: #69747C;
-  --slateAlpha: #69747C77;
-  --slateBorder: #69747C4d;
-  --slateFaint: #69747C19;
+  --slate: #69747c;
+  --slateAlpha: #69747c77;
+  --slateBorder: #69747c4d;
+  --slateFaint: #69747c19;
 
   /* basic colors */
   --blue: #0000ff;
@@ -49,23 +49,23 @@
   --indigoAlpha: #4b008277;
 
   /* neon colors */
-  --nBlue: #4666FF;
-  --nRed: #F2003C;
-  --nYellow: #CCFF00;
-  --nOrange: #FF9933;
-  --nPurple: #BC13FE;
-  --nGreen: #39FF14;
+  --nBlue: #4666ff;
+  --nRed: #f2003c;
+  --nYellow: #ccff00;
+  --nOrange: #ff9933;
+  --nPurple: #bc13fe;
+  --nGreen: #39ff14;
 
   /* other colors I like */
-  --rose: #F72585;
-  --carrot: #F18F01;
-  --dukeblue: #03045E;
-  --darkpurple: #37123C;
+  --rose: #f72585;
+  --carrot: #f18f01;
+  --dukeblue: #03045e;
+  --darkpurple: #37123c;
   --blood: #890000;
-  --rosewood: #6B0F1A;
-  --cardinal: #C41E3A;
-  --flashwhite: #EDF1F5;
-  --sky: #4CC9F0;
+  --rosewood: #6b0f1a;
+  --cardinal: #c41e3a;
+  --flashwhite: #edf1f5;
+  --sky: #4cc9f0;
 
   /* VS Code colors */
   --functions: #cff1ff;

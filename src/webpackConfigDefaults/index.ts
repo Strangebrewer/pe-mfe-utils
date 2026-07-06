@@ -10,11 +10,11 @@ interface WebpackConfigOptions {
 
 export const defaultShared = {
   react: { singleton: true },
-  'react-dom': { singleton: true },
-  'react-router-dom': { singleton: true },
-  '@tanstack/react-query': { singleton: true },
+  "react-dom": { singleton: true },
+  "react-router-dom": { singleton: true },
+  "@tanstack/react-query": { singleton: true },
   zustand: { singleton: true },
-  '@bka-stuff/pe-mfe-utils': { singleton: true },
+  "@bka-stuff/pe-mfe-utils": { singleton: true },
 };
 
 export function createWebpackConfig(options: WebpackConfigOptions) {
@@ -23,30 +23,30 @@ export function createWebpackConfig(options: WebpackConfigOptions) {
     port = 3000,
     resolve,
     _dirname,
-    publicPath = 'auto',
+    publicPath = "auto",
   } = options;
 
   return {
-    mode: 'development',
-    entry: './src/index.ts',
+    mode: "development",
+    entry: "./src/index.ts",
 
     output: {
       publicPath,
       uniqueName: appName,
       chunkLoadingGlobal: `webpackChunk_${appName}`,
-      crossOriginLoading: 'anonymous',
-      path: resolve(_dirname, 'dist'),
-      filename: '[name].bundle.js',
+      crossOriginLoading: "anonymous",
+      path: resolve(_dirname, "dist"),
+      filename: "[name].bundle.js",
       clean: true,
     },
 
     resolve: {
-      extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      extensions: [".ts", ".tsx", ".js", ".jsx"],
       symlinks: true,
       alias: {
-        axios: resolve(_dirname, 'node_modules/axios'),
-        react: resolve(_dirname, 'node_modules/react'),
-        'react-dom': resolve(_dirname, 'node_modules/react-dom'),
+        axios: resolve(_dirname, "node_modules/axios"),
+        react: resolve(_dirname, "node_modules/react"),
+        "react-dom": resolve(_dirname, "node_modules/react-dom"),
       },
     },
 
@@ -55,9 +55,9 @@ export function createWebpackConfig(options: WebpackConfigOptions) {
         {
           test: /\.tsx?$/,
           use: {
-            loader: 'ts-loader',
+            loader: "ts-loader",
             options: {
-              configFile: resolve(_dirname, 'tsconfig.json'),
+              configFile: resolve(_dirname, "tsconfig.json"),
               transpileOnly: true,
             },
           },
@@ -65,7 +65,7 @@ export function createWebpackConfig(options: WebpackConfigOptions) {
         },
         {
           test: /\.css$/,
-          use: ['style-loader', 'css-loader', 'postcss-loader'],
+          use: ["style-loader", "css-loader", "postcss-loader"],
         },
       ],
     },
@@ -78,13 +78,15 @@ export function createWebpackConfig(options: WebpackConfigOptions) {
         overlay: {
           warnings: false,
           errors: true,
-          runtimeErrors: (error: any) => !error.message.includes('ResizeObserver loop'),
+          runtimeErrors: (error: any) =>
+            !error.message.includes("ResizeObserver loop"),
         },
       },
       headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-        'Access-Control-Allow-Headers': '*',
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Headers": "*",
       },
     },
   };

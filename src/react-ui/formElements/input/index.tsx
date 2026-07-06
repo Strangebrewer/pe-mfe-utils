@@ -11,10 +11,10 @@ type InputProps = {
   required?: boolean;
   step?: string;
   placeholder?: string;
-}
+};
 
 const Input: FC<InputProps> = ({
-  type = 'text',
+  type = "text",
   name,
   value,
   onChange,
@@ -36,7 +36,7 @@ const Input: FC<InputProps> = ({
   if (placeholder) props.placeholder = placeholder;
   return (
     <input
-      className={`bka-form-element ${full ? 'bka-form-element-full' : ''}`}
+      className={`bka-form-element ${full ? "bka-form-element-full" : ""}`}
       type={type}
       name={name}
       value={value}

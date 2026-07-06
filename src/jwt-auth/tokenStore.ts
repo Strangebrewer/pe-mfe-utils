@@ -8,7 +8,10 @@ const DEFAULT_KEYS: TokenKeys = {
   refresh: "refresh_token",
 };
 
-export function createTokenStore(storage: Storage = localStorage, keys?: Partial<TokenKeys>) {
+export function createTokenStore(
+  storage: Storage = localStorage,
+  keys?: Partial<TokenKeys>,
+) {
   const k: TokenKeys = { ...DEFAULT_KEYS, ...(keys ?? {}) };
 
   return {

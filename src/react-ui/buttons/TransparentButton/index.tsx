@@ -4,9 +4,9 @@ import "./styles.css";
 type TransparentButtonProps = {
   onClick: () => any;
   text: string;
-  type?: 'button' | 'submit' | 'reset';
-  color?: 'blue' | 'red' | 'purple' | 'green';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  type?: "button" | "submit" | "reset";
+  color?: "blue" | "red" | "purple" | "green";
+  size?: "sm" | "md" | "lg" | "xl";
   title?: string;
 };
 
@@ -14,15 +14,15 @@ const TransparentButton: FC<TransparentButtonProps> = ({
   onClick,
   text,
   type,
-  color = 'blue',
-  size = 'md',
+  color = "blue",
+  size = "md",
   title,
 }) => {
-  const style: Obj = { fontSize: '16px' };
-  if (size !== 'md') {
-    if (size === 'sm') style.fontSize = '12px';
-    if (size === 'lg') style.fontSize = '20px';
-    if (size === 'xl') style.fontSize = '24px';
+  const style: Obj = { fontSize: "16px" };
+  if (size !== "md") {
+    if (size === "sm") style.fontSize = "12px";
+    if (size === "lg") style.fontSize = "20px";
+    if (size === "xl") style.fontSize = "24px";
   }
   return (
     <button

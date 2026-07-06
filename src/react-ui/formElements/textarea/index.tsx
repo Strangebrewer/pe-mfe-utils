@@ -20,7 +20,7 @@ const Textarea: FC<TextareaProps> = ({
   if (autofocus) addedProps.autoFocus = autofocus;
   return (
     <textarea
-      className={`bka-form-element bka-textarea ${full ? 'bka-form-element-full' : ''}`}
+      className={`bka-form-element bka-textarea ${full ? "bka-form-element-full" : ""}`}
       name={name}
       value={value}
       onChange={onChange}

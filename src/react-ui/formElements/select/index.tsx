@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 import "../formStyles.css";
 
 type SelectProps = {
@@ -6,8 +6,8 @@ type SelectProps = {
   value: any;
   onChange: (e: any) => any;
   full?: boolean | "true";
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const Select: FC<SelectProps> = ({
   name,
@@ -18,7 +18,7 @@ const Select: FC<SelectProps> = ({
 }) => {
   return (
     <select
-      className={`bka-form-element bka-select ${full ? 'bka-form-element-full' : ''}`}
+      className={`bka-form-element bka-select ${full ? "bka-form-element-full" : ""}`}
       name={name}
       value={value}
       onChange={onChange}

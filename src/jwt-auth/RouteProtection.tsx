@@ -1,6 +1,6 @@
-import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
-import { useUserStore } from './userStore';
+import React from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { useUserStore } from "./userStore";
 
 export function RequireAuth({ redirectUrl = "/" }) {
   const { user, isReady } = useUserStore();
@@ -9,10 +9,10 @@ export function RequireAuth({ redirectUrl = "/" }) {
   if (!isReady) return;
 
   if (!user) {
-    return <Navigate to={redirectUrl} replace />
+    return <Navigate to={redirectUrl} replace />;
   }
 
-  return <Outlet />
+  return <Outlet />;
 }
 
 export function RequireGuest({ redirectUrl = "/dashboard" }) {
@@ -22,8 +22,8 @@ export function RequireGuest({ redirectUrl = "/dashboard" }) {
   if (!isReady) return;
 
   if (user) {
-    return <Navigate to={redirectUrl} replace />
+    return <Navigate to={redirectUrl} replace />;
   }
 
-  return <Outlet />
+  return <Outlet />;
 }

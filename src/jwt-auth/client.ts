@@ -44,7 +44,11 @@ export function createAuthClient(options: CreateAuthClientOptions) {
 
     if (!refreshInFlight) {
       refreshInFlight = (async () => {
-        const data = await exchangeRefreshToken(axiosPublic, refresh, refreshEndpoint);
+        const data = await exchangeRefreshToken(
+          axiosPublic,
+          refresh,
+          refreshEndpoint,
+        );
         store.setAccessToken(data.accessToken);
         store.setRefreshToken(data.refreshToken);
         return data.accessToken;

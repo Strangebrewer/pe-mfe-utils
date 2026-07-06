@@ -4,18 +4,18 @@ import "./styles.css";
 
 type ButtonProps = {
   text: string;
-  color: 'blue' | 'green' | 'red' | 'grey' | 'purple' | 'yellow';
-  type?: 'button' | 'submit' | 'reset';
+  color: "blue" | "green" | "red" | "grey" | "purple" | "yellow";
+  type?: "button" | "submit" | "reset";
   small?: boolean;
   last?: boolean;
   disabled?: boolean;
   onClick?: (event?: any) => void;
-}
+};
 
 const Button: FC<ButtonProps> = ({
   text,
-  color = 'blue',
-  type = 'button',
+  color = "blue",
+  type = "button",
   small = false,
   last = false,
   disabled = false,
@@ -26,8 +26,8 @@ const Button: FC<ButtonProps> = ({
       type={type}
       className={`
         button-base
-        ${small ? 'button-small' : ''}
-        ${last ? 'button-last' : ''}
+        ${small ? "button-small" : ""}
+        ${last ? "button-last" : ""}
         button-${color}
       `}
       onClick={onClick}

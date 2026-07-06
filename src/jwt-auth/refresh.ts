@@ -8,7 +8,7 @@ export type TokenExchangeResponse = {
 export async function exchangeRefreshToken(
   axios: AxiosInstance,
   refreshToken: string,
-  endpoint = "/token/exchange"
+  endpoint = "/token/exchange",
 ): Promise<TokenExchangeResponse> {
   const response = await axios.post(
     endpoint,
@@ -18,7 +18,7 @@ export async function exchangeRefreshToken(
         "Content-Type": "application/json",
         Authorization: `Bearer ${refreshToken}`,
       },
-    }
+    },
   );
 
   if (!response?.data?.accessToken || !response?.data?.refreshToken) {

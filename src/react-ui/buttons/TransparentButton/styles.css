@@ -5,11 +5,15 @@
   cursor: pointer;
   padding: 0 6px;
   margin: 0 12px;
-  transition: color 0.12s ease-in-out, text-shadow 0.12s ease-in-out, transform 0.12s ease-in-out;
+  transition:
+    color 0.12s ease-in-out,
+    text-shadow 0.12s ease-in-out,
+    transform 0.12s ease-in-out;
 }
 
 .bka-transparent-btn-blue {
-  text-shadow: 0 0 1px var(--nCyanAlpha),
+  text-shadow:
+    0 0 1px var(--nCyanAlpha),
     0 0 2px var(--nCyanAlpha),
     0 0 3px var(--nCyanAlpha),
     2px 3px 5px var(--nCyanAlpha);
@@ -20,7 +24,8 @@
 }
 
 .bka-transparent-btn-red {
-  text-shadow: 0 0 1px var(--candyAlpha),
+  text-shadow:
+    0 0 1px var(--candyAlpha),
     0 0 2px var(--candyAlpha),
     0 0 3px var(--candyAlpha),
     2px 3px 5px var(--candyAlpha);
@@ -31,7 +36,8 @@
 }
 
 .bka-transparent-btn-green {
-  text-shadow: 0 0 1px var(--limeAlpha),
+  text-shadow:
+    0 0 1px var(--limeAlpha),
     0 0 2px var(--limeAlpha),
     0 0 3px var(--limeAlpha),
     2px 3px 5px var(--limeAlpha);
@@ -42,7 +48,8 @@
 }
 
 .bka-transparent-btn-purple {
-  text-shadow: 0 0 1px var(--nPurpleAlpha),
+  text-shadow:
+    0 0 1px var(--nPurpleAlpha),
     0 0 2px var(--nPurpleAlpha),
     0 0 3px var(--nPurpleAlpha),
     2px 3px 5px var(--nPurpleAlpha);

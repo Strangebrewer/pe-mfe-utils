@@ -4,9 +4,9 @@ import "./styles.css";
 type GhostButtonProps = {
   onClick: (event?: any) => any;
   text: string;
-  type?: 'button' | 'submit' | 'reset';
-  color?: 'purple' | 'blue' | 'green' | 'red' | 'grey';
-  size?: 'sm' | 'md';
+  type?: "button" | "submit" | "reset";
+  color?: "purple" | "blue" | "green" | "red" | "grey";
+  size?: "sm" | "md";
   last?: boolean;
   disabled?: boolean;
   title?: string;
@@ -15,9 +15,9 @@ type GhostButtonProps = {
 const GhostButton: FC<GhostButtonProps> = ({
   onClick,
   text,
-  type = 'button',
-  color = 'violet',
-  size = 'md',
+  type = "button",
+  color = "violet",
+  size = "md",
   last = false,
   disabled = false,
   title,
@@ -27,7 +27,7 @@ const GhostButton: FC<GhostButtonProps> = ({
       title={title}
       type={type}
       disabled={disabled}
-      className={`bka-ghost-btn bka-ghost-btn-${color}${size === 'sm' ? ' bka-ghost-btn-small' : ''}${last ? ' bka-ghost-btn-last' : ''}`}
+      className={`bka-ghost-btn bka-ghost-btn-${color}${size === "sm" ? " bka-ghost-btn-small" : ""}${last ? " bka-ghost-btn-last" : ""}`}
       onClick={onClick}
     >
       {text}

@@ -3,6 +3,7 @@
 Auth utilities, a basic React component library, and shared webpack config for micro-frontend repos. I created this so I could share logic between MFEs without copying it into each one.
 
 ## Auth Utils
+
 To use the auth utils in a project:
 
 `pnpm add @bka-stuff/mfe-utils@git+https://github.com/Strangebrewer/mfe-utils.git#main`
@@ -31,7 +32,9 @@ createAuthClient({
 Then use `axiosPublic` and `axiosAuth` wherever you feel like. All the token refresh and all that stuff is handled by the package.
 
 ### Defaults
+
 There are a few defaults that can be changed by adding props to `createAuthClient` options:
+
 - `storage`: defaults to localstorage
 - `keys`: defaults to `{ access: "access_token", refresh: "refresh_token" }
   - you can change one or both of these
@@ -42,19 +45,24 @@ There are a few defaults that can be changed by adding props to `createAuthClien
 `createWebpackConfig` provides base webpack defaults for MFE repos. Each MFE spreads it and adds its own plugins:
 
 ```ts
-import path from 'path';
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { createWebpackConfig, defaultShared } from '@bka-stuff/mfe-utils';
+import path from "path";
+import webpack from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { createWebpackConfig, defaultShared } from "@bka-stuff/mfe-utils";
 
 export default {
-  ...createWebpackConfig({ appName: 'my-app', port: 3001, resolve: path.resolve, _dirname: __dirname }),
+  ...createWebpackConfig({
+    appName: "my-app",
+    port: 3001,
+    resolve: path.resolve,
+    _dirname: __dirname,
+  }),
   plugins: [
-    new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new HtmlWebpackPlugin({ template: "./public/index.html" }),
     new webpack.container.ModuleFederationPlugin({
-      name: 'my-app',
-      filename: 'remoteEntry.js',
-      exposes: { './App': './src/App' },
+      name: "my-app",
+      filename: "remoteEntry.js",
+      exposes: { "./App": "./src/App" },
       shared: { ...defaultShared },
     }),
   ],
