@@ -34,3 +34,39 @@
 .bka-textarea {
   min-height: 48px;
 }
+
+.bka-list-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(26, 15, 46, 0.8);
+    border-radius: 12px;
+    padding: 12px 6px;
+
+    > span {
+      flex: 1;
+      font-size: 14px;
+      color: #f0e6ff;
+    }
+
+    > button {
+      color: #e22c5a;
+
+      &:hover {
+        color: #f0e6ff;
+        font-size: 12px;
+        line-height: 1;
+      }
+    }
+  }
+
+  > input {
+    border: 1px solid #bc13fe;
+    border-radius: 8px;
+  }
+}
