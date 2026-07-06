@@ -3,7 +3,7 @@ import "../formStyles.css";
 
 type InputProps = {
   type?: string;
-  name: string;
+  name?: string;
   value: any;
   onChange: (e: any) => any;
   full?: boolean | "true";
