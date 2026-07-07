@@ -9,6 +9,7 @@ export interface TracerStore {
   traces: Trace[];
   addTraceId: (trace: Trace) => void;
   removeTraceId: (trace: Trace) => void;
+  clearTraces: () => void;
 }
 
 export const useTracerStore = create<TracerStore>((set) => ({
@@ -21,6 +22,7 @@ export const useTracerStore = create<TracerStore>((set) => ({
     set((state: any) => ({
       traces: state.traces.filter((t: Trace) => t.id !== trace.id),
     })),
+  clearTraces: () => set({ traces: [] }),
 }));
 
 export function startTrace(label: string) {
