@@ -4,7 +4,7 @@ import Button from "../Button";
 
 type Props = {
   onClose: () => void;
-  onConfirm?: () => void;
+  onConfirm?: (e?: React.FormEvent) => void;
   confirmText: string;
   confirmColor?: string;
   declineText?: string;
