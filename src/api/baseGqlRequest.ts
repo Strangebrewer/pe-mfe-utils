@@ -1,6 +1,6 @@
 import { AxiosInstance } from "axios";
 
-async function buildGqlRequest(GQL_URL: string, axiosAuth: AxiosInstance) {
+function buildGqlRequest(GQL_URL: string, axiosAuth: AxiosInstance) {
   return async function <T = any>(
     query: string,
     variables?: Record<string, any>,
