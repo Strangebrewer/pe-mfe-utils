@@ -69,3 +69,54 @@
   flex-direction: column;
   gap: 4px;
 }
+
+.bka-inline-field {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  gap: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & > input {
+      background-color: var(--baseBg);
+      border: 1px solid var(--nPurpleBorder);
+      border-radius: 4px;
+      color: var(--textPrimary);
+      padding: 4px 8px;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 3px var(--nPurple);
+      }
+    }
+  }
+
+  & > span:first-of-type {
+    color: var(--textMuted);
+    flex-shrink: 0;
+    width: 112px;
+  }
+
+  & > span:nth-child(1) {
+    border-radius: 4px;
+    color: var(--textPrimary);
+    cursor: pointer;
+    padding: 2px 6px;
+    margin-left: -6px;
+
+    &:hover {
+      background-color: var(--nPurpleFaint);
+    }
+
+    & > span {
+      color: var(--textMuted);
+      font-style: italic;
+    }
+  }
+}

@@ -15,3 +15,4 @@ export { default as Label } from "./formElements/label/index";
 export { default as Select } from "./formElements/select/index";
 export { default as Textarea } from "./formElements/textarea/index";
 export { default as InputGroup } from "./formElements/inputGroup/index";
+export { default as InlineField } from "./formElements/inlineField/index";

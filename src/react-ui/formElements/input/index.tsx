@@ -5,7 +5,8 @@ type InputProps = {
   type?: string;
   name?: string;
   value: any;
-  onChange: (e: any) => any;
+  onChange: (e: any) => void;
+  onKeyDown?: (e: any) => void;
   full?: boolean | "true";
   autofocus?: boolean;
   required?: boolean;
