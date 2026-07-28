@@ -14,7 +14,9 @@ function buildGqlRequest(GQL_URL: string, axiosAuth: AxiosInstance) {
       { headers },
     );
     if (response.data.errors) {
-      throw new Error(response.data.errors[0].message);
+      throw new Error(
+        response.data.errors.map((e: any) => e.message).join("; "),
+      );
     }
     return response.data.data;
   };
