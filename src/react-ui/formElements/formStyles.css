@@ -103,7 +103,7 @@
     width: 112px;
   }
 
-  & > span:nth-child(1) {
+  & > span:nth-of-type(2) {
     border-radius: 4px;
     color: var(--textPrimary);
     cursor: pointer;
