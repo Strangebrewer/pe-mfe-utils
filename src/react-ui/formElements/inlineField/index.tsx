@@ -6,6 +6,7 @@ type InlineFieldProps = {
   value: string | number | undefined;
   onSave: (value: string) => void;
   type?: "text" | "number";
+  color?: "blue" | "purple" | "green";
   placeholder?: string;
 };
 
@@ -14,6 +15,7 @@ const InlineField: FC<InlineFieldProps> = ({
   value,
   onSave,
   type = "text",
+  color = "purple",
   placeholder,
 }) => {
   const [editing, setEditing] = useState(false);
@@ -47,7 +49,7 @@ const InlineField: FC<InlineFieldProps> = ({
           <GhostButton
             text="Save"
             size="sm"
-            color="purple"
+            color={color}
             onClick={handleSave}
             last
           />
