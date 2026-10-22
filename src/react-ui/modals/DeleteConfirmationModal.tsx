@@ -7,6 +7,7 @@ type Props = {
   onClose: () => void;
   onConfirm: () => void;
   name?: string;
+  text?: string;
 };
 
 const DeleteConfirmationModal: FC<Props> = ({
@@ -14,6 +15,7 @@ const DeleteConfirmationModal: FC<Props> = ({
   onClose,
   onConfirm,
   name,
+  text,
 }) => {
   function handleConfirm() {
     onConfirm();
@@ -23,7 +25,7 @@ const DeleteConfirmationModal: FC<Props> = ({
   return (
     <Modal isOpen={isOpen} close={onClose}>
       <div className="bka-modal---delete-confirmation">
-        <p>Are you sure you want to delete</p>
+        <p>{text ?? "Are you sure you want to delete"}</p>
         <p>
           {name}
           <span>&nbsp;?</span>
