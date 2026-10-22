@@ -6,6 +6,7 @@ type Props = {
   isOpen: boolean;
   onClose: () => void;
   onConfirm: () => void;
+  confirmText?: string;
   name?: string;
   text?: string;
 };
@@ -14,6 +15,7 @@ const DeleteConfirmationModal: FC<Props> = ({
   isOpen,
   onClose,
   onConfirm,
+  confirmText = "Delete",
   name,
   text,
 }) => {
@@ -32,7 +34,7 @@ const DeleteConfirmationModal: FC<Props> = ({
         </p>
         <div>
           <GhostButton color="grey" text="Cancel" onClick={onClose} />
-          <Button color="red" text="Delete" onClick={handleConfirm} last />
+          <Button color="red" text={confirmText} onClick={handleConfirm} last />
         </div>
       </div>
     </Modal>
